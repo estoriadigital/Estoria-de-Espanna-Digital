@@ -1,0 +1,483 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D18SRubric",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "reading": "Base",
+                        "original": "Dela",
+                        "rule_match": [
+                            "Dela"
+                        ],
+                        "index": "2",
+                        "t": "Dela"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "muerte",
+                        "rule_match": [
+                            "muerte"
+                        ],
+                        "index": "4",
+                        "t": "muerte"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "dell",
+                        "rule_match": [
+                            "dell"
+                        ],
+                        "index": "6",
+                        "t": "dell"
+                    },
+                    {
+                        "expanded": "emperador",
+                        "rule_match": [
+                            "emperador",
+                            "emꝑador"
+                        ],
+                        "index": "8",
+                        "t": "emperador",
+                        "reading": "Base",
+                        "original": "emꝑador"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "Amilcar.",
+                        "rule_match": [
+                            "Amilcar."
+                        ],
+                        "index": "10",
+                        "t": "Amilcar."
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {},
+        "hand_id_map": {
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q"
+        },
+        "event_list": [
+            "combine apparatus unit 2 with unit 3.",
+            "combine apparatus unit 2 with unit 3.",
+            "combine apparatus unit 2 with unit 3.",
+            "combine apparatus unit 1 with unit 2.",
+            "saved state"
+        ],
+        "om_readings": [
+            "E2"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "2",
+                "end": 10,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "",
+                            "r"
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "Dela",
+                                    "rule_match": [
+                                        "Dela"
+                                    ],
+                                    "index": "2",
+                                    "t": "Dela"
+                                },
+                                "interface": "Dela",
+                                "index": "2",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "Q"
+                                ],
+                                "E1": {
+                                    "original": "Dela",
+                                    "rule_match": [
+                                        "Dela"
+                                    ],
+                                    "index": "2",
+                                    "t": "Dela"
+                                },
+                                "Q": {
+                                    "original": "Dela",
+                                    "rule_match": [
+                                        "Dela"
+                                    ],
+                                    "index": "2",
+                                    "t": "Dela"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "muerte",
+                                    "rule_match": [
+                                        "muerte"
+                                    ],
+                                    "index": "4",
+                                    "t": "muerte"
+                                },
+                                "interface": "muerte",
+                                "index": "4",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "Q"
+                                ],
+                                "E1": {
+                                    "original": "muerte",
+                                    "rule_match": [
+                                        "muerte"
+                                    ],
+                                    "index": "4",
+                                    "t": "muerte"
+                                },
+                                "Q": {
+                                    "original": "muerte",
+                                    "rule_match": [
+                                        "muerte"
+                                    ],
+                                    "index": "4",
+                                    "t": "muerte"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "dell",
+                                    "rule_match": [
+                                        "dell"
+                                    ],
+                                    "index": "6",
+                                    "t": "dell"
+                                },
+                                "interface": "dell",
+                                "index": "6",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "Q"
+                                ],
+                                "E1": {
+                                    "original": "dell",
+                                    "rule_match": [
+                                        "dell"
+                                    ],
+                                    "index": "6",
+                                    "t": "dell"
+                                },
+                                "Q": {
+                                    "n": "dell",
+                                    "original": "del",
+                                    "decision_details": [
+                                        {
+                                            "n": "dell",
+                                            "class": "regularised",
+                                            "t": "del",
+                                            "scope": "once",
+                                            "_id": "verse_D18SRubric_2b640e2b-7737-4665-bb25-6792a3be8682"
+                                        }
+                                    ],
+                                    "index": "6",
+                                    "t": "del",
+                                    "rule_match": [
+                                        "del"
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "emꝑador",
+                                    "t": "emperador",
+                                    "rule_match": [
+                                        "emperador",
+                                        "emꝑador"
+                                    ],
+                                    "index": "8",
+                                    "expanded": "emperador"
+                                },
+                                "interface": "emperador",
+                                "index": "8",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "Q"
+                                ],
+                                "E1": {
+                                    "original": "emꝑador",
+                                    "t": "emperador",
+                                    "rule_match": [
+                                        "emperador",
+                                        "emꝑador"
+                                    ],
+                                    "index": "8",
+                                    "expanded": "emperador"
+                                },
+                                "Q": {
+                                    "n": "emperador",
+                                    "original": "empador",
+                                    "decision_details": [
+                                        {
+                                            "n": "emperador",
+                                            "class": "regularised",
+                                            "t": "empador",
+                                            "scope": "once",
+                                            "_id": "verse_D18SRubric_6ab7e143-b8f5-47a4-b77e-dcec17138fda"
+                                        }
+                                    ],
+                                    "index": "8",
+                                    "t": "empador",
+                                    "rule_match": [
+                                        "empador"
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "Amilcar.",
+                                    "rule_match": [
+                                        "Amilcar."
+                                    ],
+                                    "index": "10",
+                                    "t": "Amilcar."
+                                },
+                                "interface": "Amilcar.",
+                                "index": "10",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "Q"
+                                ],
+                                "E1": {
+                                    "original": "Amilcar.",
+                                    "rule_match": [
+                                        "Amilcar."
+                                    ],
+                                    "index": "10",
+                                    "t": "Amilcar."
+                                },
+                                "Q": {
+                                    "n": "Amilcar.",
+                                    "original": "amilcar",
+                                    "decision_details": [
+                                        {
+                                            "n": "Amilcar.",
+                                            "class": "regularised",
+                                            "t": "amilcar",
+                                            "scope": "once",
+                                            "_id": "verse_D18SRubric_166508b5-7c2c-41e6-b390-ec59d4ec5f3c"
+                                        }
+                                    ],
+                                    "index": "10",
+                                    "t": "amilcar",
+                                    "rule_match": [
+                                        "amilcar"
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "ad6a5971eafc2069ad79af9cce252aea"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E2"
+                        ],
+                        "_id": "626bfa6c284f5734dacbb5870ca5a18b"
+                    }
+                ],
+                "_id": "618fa9b3a0ffbe013eec900770e00ed5"
+            },
+            {
+                "first_word_index": "11.1",
+                "end": 11,
+                "start": 11,
+                "readings": [
+                    {
+                        "label": "a",
+                        "text": [],
+                        "type": "om",
+                        "suffixes": [
+                            "",
+                            ""
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E1"
+                        ],
+                        "_id": "e2cdb135fd95b32312ae17741068a444"
+                    },
+                    {
+                        "label": "b",
+                        "suffixes": [
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "reading": [
+                                    "Q"
+                                ],
+                                "interface": "e",
+                                "index": "11.1",
+                                "Q": {
+                                    "original": "⁊",
+                                    "t": "e",
+                                    "rule_match": [
+                                        "e",
+                                        "⁊"
+                                    ],
+                                    "index": "12",
+                                    "expanded": "e"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Q"
+                                ],
+                                "interface": "de",
+                                "index": "11.2",
+                                "Q": {
+                                    "original": "de",
+                                    "rule_match": [
+                                        "de"
+                                    ],
+                                    "index": "14",
+                                    "t": "de"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Q"
+                                ],
+                                "interface": "su",
+                                "index": "11.3",
+                                "Q": {
+                                    "original": "su",
+                                    "rule_match": [
+                                        "su"
+                                    ],
+                                    "index": "16",
+                                    "t": "su"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Q"
+                                ],
+                                "interface": "yerno",
+                                "index": "11.4",
+                                "Q": {
+                                    "original": "yerno",
+                                    "rule_match": [
+                                        "yerno"
+                                    ],
+                                    "index": "18",
+                                    "t": "yerno"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Q"
+                                ],
+                                "interface": "asdrubal.",
+                                "index": "11.5",
+                                "Q": {
+                                    "original": "asdrubal.",
+                                    "rule_match": [
+                                        "asdrubal."
+                                    ],
+                                    "index": "20",
+                                    "t": "asdrubal."
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Q"
+                        ],
+                        "_id": "edf800794c551e7412318eb1581e8098"
+                    },
+                    {
+                        "label": "c",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E2"
+                        ],
+                        "_id": "1c998a626525ca6c2763d7465236836e"
+                    }
+                ],
+                "_id": "34f46bc7b0c2cb90e3ddc65564ca97a3"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1453292129760
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D18SRubric.json"
+}

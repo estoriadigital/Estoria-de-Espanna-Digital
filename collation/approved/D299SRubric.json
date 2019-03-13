@@ -1,0 +1,487 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D299SRubric",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "reading": "Base",
+                        "original": "Delos",
+                        "rule_match": [
+                            "Delos"
+                        ],
+                        "index": "2",
+                        "t": "Delos"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "fechos",
+                        "rule_match": [
+                            "fechos"
+                        ],
+                        "index": "4",
+                        "t": "fechos"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "del",
+                        "rule_match": [
+                            "del"
+                        ],
+                        "index": "6",
+                        "t": "del"
+                    },
+                    {
+                        "expanded": "quin",
+                        "rule_match": [
+                            "quin",
+                            "qⁱn"
+                        ],
+                        "index": "8",
+                        "t": "quin",
+                        "reading": "Base",
+                        "original": "qⁱn"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "to",
+                        "rule_match": [
+                            "to"
+                        ],
+                        "index": "10",
+                        "t": "to"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "anno",
+                        "rule_match": [
+                            "anno"
+                        ],
+                        "index": "12",
+                        "t": "anno"
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {
+            "regularised": [
+                {
+                    "name": [
+                        "Regularised"
+                    ],
+                    "start": 8,
+                    "identifier": [
+                        "r"
+                    ],
+                    "unit_id": "0e609da0d9ff97a2776811c77e9c1feb",
+                    "suffixed_sigla": [
+                        true
+                    ],
+                    "value": "regularised",
+                    "reading_text": "qrinto",
+                    "witness": "Q",
+                    "end": 10,
+                    "parent_text": "quin to",
+                    "apparatus": "apparatus",
+                    "subreading": [
+                        false
+                    ],
+                    "suffixed_label": [
+                        false
+                    ]
+                }
+            ]
+        },
+        "hand_id_map": {
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q"
+        },
+        "event_list": [
+            "combine apparatus unit 1 with unit 2.",
+            "make offset reading of type regularised in apparatus unit 1 of reading 1 as a subreading of 9b1b1f54081526805ee0d51780113588.",
+            "recombine readings in unit 1in  apparatus apparatus.",
+            "saved state"
+        ],
+        "om_readings": [
+            "E2"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "2",
+                "end": 6,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "Delos",
+                                    "rule_match": [
+                                        "Delos"
+                                    ],
+                                    "index": "2",
+                                    "t": "Delos"
+                                },
+                                "interface": "Delos",
+                                "index": "2",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "Q"
+                                ],
+                                "E1": {
+                                    "original": "Delos",
+                                    "rule_match": [
+                                        "Delos"
+                                    ],
+                                    "index": "2",
+                                    "t": "Delos"
+                                },
+                                "Q": {
+                                    "original": "Delos",
+                                    "rule_match": [
+                                        "Delos"
+                                    ],
+                                    "index": "2",
+                                    "t": "Delos"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "fechos",
+                                    "rule_match": [
+                                        "fechos"
+                                    ],
+                                    "index": "4",
+                                    "t": "fechos"
+                                },
+                                "interface": "fechos",
+                                "index": "4",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "Q"
+                                ],
+                                "E1": {
+                                    "original": "fechos",
+                                    "rule_match": [
+                                        "fechos"
+                                    ],
+                                    "index": "4",
+                                    "t": "fechos"
+                                },
+                                "Q": {
+                                    "original": "fechos",
+                                    "rule_match": [
+                                        "fechos"
+                                    ],
+                                    "index": "4",
+                                    "t": "fechos"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "del",
+                                    "rule_match": [
+                                        "del"
+                                    ],
+                                    "index": "6",
+                                    "t": "del"
+                                },
+                                "interface": "del",
+                                "index": "6",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "Q"
+                                ],
+                                "E1": {
+                                    "original": "del",
+                                    "rule_match": [
+                                        "del"
+                                    ],
+                                    "index": "6",
+                                    "t": "del"
+                                },
+                                "Q": {
+                                    "original": "del",
+                                    "rule_match": [
+                                        "del"
+                                    ],
+                                    "index": "6",
+                                    "t": "del"
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "a9a93954fab598408e2f1c627ee423f8"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E2"
+                        ],
+                        "_id": "85b87af3cca569afb05839ad204f6c8c"
+                    }
+                ],
+                "_id": "f875796707ddabc728ba867584f94414"
+            },
+            {
+                "first_word_index": "8.1",
+                "end": 10,
+                "start": 8,
+                "readings": [
+                    {
+                        "label": "a",
+                        "text": [
+                            {
+                                "reading": [
+                                    "Base",
+                                    "E1"
+                                ],
+                                "Base": {
+                                    "original": "qⁱn",
+                                    "t": "quin",
+                                    "rule_match": [
+                                        "quin",
+                                        "qⁱn"
+                                    ],
+                                    "index": "8",
+                                    "expanded": "quin"
+                                },
+                                "interface": "quin",
+                                "E1": {
+                                    "original": "qⁱn",
+                                    "t": "quin",
+                                    "rule_match": [
+                                        "quin",
+                                        "qⁱn"
+                                    ],
+                                    "index": "8",
+                                    "expanded": "quin"
+                                },
+                                "index": "8.1"
+                            },
+                            {
+                                "reading": [
+                                    "Base",
+                                    "E1"
+                                ],
+                                "Base": {
+                                    "original": "to",
+                                    "rule_match": [
+                                        "to"
+                                    ],
+                                    "index": "10",
+                                    "t": "to"
+                                },
+                                "interface": "to",
+                                "E1": {
+                                    "original": "to",
+                                    "rule_match": [
+                                        "to"
+                                    ],
+                                    "index": "10",
+                                    "t": "to"
+                                },
+                                "index": "10.1"
+                            }
+                        ],
+                        "suffixes": [
+                            "",
+                            "",
+                            "r"
+                        ],
+                        "standoff_subreadings": [
+                            "Q"
+                        ],
+                        "SR_text": {
+                            "Q": {
+                                "text": [
+                                    {
+                                        "reading": [
+                                            "Q"
+                                        ],
+                                        "interface": "qrinto",
+                                        "index": "8.1",
+                                        "Q": {
+                                            "original": "qⁱnto",
+                                            "interface": "qrinto",
+                                            "rule_match": [
+                                                "qrinto",
+                                                "qⁱnto"
+                                            ],
+                                            "index": "8",
+                                            "t": "qrinto",
+                                            "expanded": "qrinto"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "witnesses": [
+                            "Base",
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "9b1b1f54081526805ee0d51780113588"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E2"
+                        ],
+                        "_id": "6c0315e2f045a4419cf532c8739766b2"
+                    }
+                ],
+                "_id": "0e609da0d9ff97a2776811c77e9c1feb"
+            },
+            {
+                "first_word_index": "12.1",
+                "end": 12,
+                "start": 12,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "",
+                            "r"
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "anno",
+                                    "rule_match": [
+                                        "anno"
+                                    ],
+                                    "index": "12",
+                                    "t": "anno"
+                                },
+                                "interface": "anno",
+                                "index": "12.1",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "Q"
+                                ],
+                                "E1": {
+                                    "original": "anno",
+                                    "rule_match": [
+                                        "anno"
+                                    ],
+                                    "index": "12",
+                                    "t": "anno"
+                                },
+                                "Q": {
+                                    "n": "anno",
+                                    "original": "an̄o.",
+                                    "decision_details": [
+                                        {
+                                            "n": "anno",
+                                            "class": "regularised",
+                                            "t": "anno.",
+                                            "scope": "once",
+                                            "_id": "verse_D299SRubric_4a8a9612-4f8c-472a-b07e-10878c53563d"
+                                        }
+                                    ],
+                                    "index": "10",
+                                    "t": "anno.",
+                                    "rule_match": [
+                                        "anno.",
+                                        "an̄o."
+                                    ],
+                                    "expanded": "anno.",
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "b4b42a2eba15f4261f29bdc406368d88"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E2"
+                        ],
+                        "_id": "4e697edf0777159cfb10ef8771aa4447"
+                    }
+                ],
+                "_id": "174a90d0e915336f744322e04155e5f6"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1463045912056
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D299SRubric.json"
+}

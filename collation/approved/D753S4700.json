@@ -1,0 +1,311 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q",
+            "T",
+            "Ss"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D753S4700",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "reading": "Base",
+                        "original": "atraydor",
+                        "rule_match": [
+                            "atraydor"
+                        ],
+                        "index": "2",
+                        "t": "atraydor"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "falso",
+                        "rule_match": [
+                            "falso"
+                        ],
+                        "index": "4",
+                        "t": "falso"
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {
+            "regularised": [
+                {
+                    "name": [
+                        "Regularised"
+                    ],
+                    "start": 2,
+                    "identifier": [
+                        "r"
+                    ],
+                    "unit_id": "622496e01873b6082886f470b5e404cf",
+                    "suffixed_sigla": [
+                        true
+                    ],
+                    "value": "regularised",
+                    "reading_text": "A traydor",
+                    "witness": "E2",
+                    "end": 2,
+                    "parent_text": "atraydor",
+                    "apparatus": "apparatus",
+                    "subreading": [
+                        false
+                    ],
+                    "suffixed_label": [
+                        false
+                    ]
+                }
+            ]
+        },
+        "hand_id_map": {
+            "Ss": "Ss",
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q",
+            "T": "T"
+        },
+        "event_list": [
+            "combine apparatus unit 0 with unit 1.",
+            "make offset reading of type regularised in apparatus unit 0 of reading 1 as a subreading of f4d3e7d4f30ebb6fd6bbf0f849e62877.",
+            "recombine readings in unit 0in  apparatus apparatus.",
+            "saved state"
+        ],
+        "om_readings": [
+            "E1",
+            "Q",
+            "Ss"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "2.1",
+                "end": 2,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "text": [
+                            {
+                                "reading": [
+                                    "Base",
+                                    "T"
+                                ],
+                                "Base": {
+                                    "original": "atraydor",
+                                    "rule_match": [
+                                        "atraydor"
+                                    ],
+                                    "index": "2",
+                                    "t": "atraydor"
+                                },
+                                "interface": "atraydor",
+                                "index": "2.1",
+                                "T": {
+                                    "original": "atraydor",
+                                    "rule_match": [
+                                        "atraydor"
+                                    ],
+                                    "index": "2",
+                                    "t": "atraydor"
+                                }
+                            }
+                        ],
+                        "suffixes": [
+                            "",
+                            "r",
+                            ""
+                        ],
+                        "standoff_subreadings": [
+                            "E2"
+                        ],
+                        "SR_text": {
+                            "E2": {
+                                "text": [
+                                    {
+                                        "reading": [
+                                            "E2"
+                                        ],
+                                        "interface": "A",
+                                        "index": "2.1",
+                                        "E2": {
+                                            "original": "A",
+                                            "interface": "A",
+                                            "rule_match": [
+                                                "A"
+                                            ],
+                                            "index": "2",
+                                            "t": "A"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "E2"
+                                        ],
+                                        "interface": "traydor",
+                                        "index": "2.2",
+                                        "E2": {
+                                            "original": "traydor",
+                                            "interface": "traydor",
+                                            "rule_match": [
+                                                "traydor"
+                                            ],
+                                            "index": "4",
+                                            "t": "traydor"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "T"
+                        ],
+                        "_id": "f4d3e7d4f30ebb6fd6bbf0f849e62877"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q",
+                            "Ss"
+                        ],
+                        "_id": "e6c6911413a7e9b45371d80e8b5413b8"
+                    }
+                ],
+                "_id": "622496e01873b6082886f470b5e404cf"
+            },
+            {
+                "first_word_index": "4.1",
+                "end": 4,
+                "start": 4,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "r",
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "falso",
+                                    "rule_match": [
+                                        "falso"
+                                    ],
+                                    "index": "4",
+                                    "t": "falso"
+                                },
+                                "interface": "falso",
+                                "index": "4.1",
+                                "reading": [
+                                    "Base",
+                                    "T",
+                                    "E2"
+                                ],
+                                "E2": {
+                                    "n": "falso",
+                                    "original": "fasso.",
+                                    "decision_details": [
+                                        {
+                                            "n": "falso",
+                                            "class": "regularised",
+                                            "t": "fasso.",
+                                            "scope": "once",
+                                            "_id": "verse_D758S4700_ec7dcb4c-7a66-4122-a117-99bb10260dec"
+                                        }
+                                    ],
+                                    "index": "6",
+                                    "t": "fasso.",
+                                    "rule_match": [
+                                        "fasso."
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                },
+                                "T": {
+                                    "original": "falso",
+                                    "rule_match": [
+                                        "falso"
+                                    ],
+                                    "index": "4",
+                                    "t": "falso"
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "T"
+                        ],
+                        "_id": "fd07683c2765c52c603a063469cf776e"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q",
+                            "Ss"
+                        ],
+                        "_id": "45ff12587bba3c38d55a13ad75b731b3"
+                    }
+                ],
+                "_id": "913e05e48cd4148dff7fc819ba2de4d3"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1477319813033
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D758S4700.json"
+}

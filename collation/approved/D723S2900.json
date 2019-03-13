@@ -1,0 +1,387 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q",
+            "T",
+            "Ss"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D723S2900",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "expanded": "Mouieron",
+                        "rule_match": [
+                            "Mouieron",
+                            "Mouierō"
+                        ],
+                        "index": "2",
+                        "t": "Mouieron",
+                        "reading": "Base",
+                        "original": "Mouierō"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "dalli",
+                        "rule_match": [
+                            "dalli"
+                        ],
+                        "index": "4",
+                        "t": "dalli"
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {
+            "regularised": [
+                {
+                    "name": [
+                        "Regularised"
+                    ],
+                    "start": 2,
+                    "identifier": [
+                        "r"
+                    ],
+                    "unit_id": "c8df5911f49c6c70562a21001208d0f6",
+                    "suffixed_sigla": [
+                        true
+                    ],
+                    "value": "regularised",
+                    "reading_text": "mouieron dalli.",
+                    "witness": "E2",
+                    "end": 4,
+                    "parent_text": "Mouieron dalli",
+                    "apparatus": "apparatus",
+                    "subreading": [
+                        false
+                    ],
+                    "suffixed_label": [
+                        false
+                    ]
+                }
+            ]
+        },
+        "hand_id_map": {
+            "Ss": "Ss",
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q",
+            "T": "T"
+        },
+        "event_list": [
+            "combine apparatus unit 3 with unit 4.",
+            "combine apparatus unit 1 with unit 2.",
+            "combine apparatus unit 1 with unit 2.",
+            "combine apparatus unit 0 with unit 1.",
+            "move reading 1 with witnesses Base, T from unit 0 to index 1 in apparatus.",
+            "recombine readings in unit 1in  apparatus apparatus.",
+            "combine apparatus unit 1 with unit 2.",
+            "combine apparatus unit 1 with unit 2.",
+            "make offset reading of type regularised in apparatus unit 1 of reading 1 as a subreading of 2e94d58d3f1cce9f9703c74c4981af10.",
+            "recombine readings in unit 1in  apparatus apparatus.",
+            "saved state"
+        ],
+        "om_readings": [
+            "E1",
+            "Q",
+            "Ss"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "1.1",
+                "end": 1,
+                "start": 1,
+                "readings": [
+                    {
+                        "label": "a",
+                        "text": [],
+                        "type": "om",
+                        "suffixes": [
+                            "",
+                            ""
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "T"
+                        ],
+                        "_id": "5acb1e83994159e9608916f2212a9276"
+                    },
+                    {
+                        "label": "b",
+                        "suffixes": [
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "reading": [
+                                    "E2"
+                                ],
+                                "interface": "¶",
+                                "index": "1.1",
+                                "E2": {
+                                    "original": "¶",
+                                    "rule_match": [
+                                        "¶"
+                                    ],
+                                    "index": "2",
+                                    "t": "¶"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "E2"
+                                ],
+                                "interface": "Otro",
+                                "index": "1.2",
+                                "E2": {
+                                    "original": "Otro",
+                                    "rule_match": [
+                                        "Otro"
+                                    ],
+                                    "index": "4",
+                                    "t": "Otro"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "E2"
+                                ],
+                                "interface": "dia",
+                                "index": "1.3",
+                                "E2": {
+                                    "original": "dia",
+                                    "rule_match": [
+                                        "dia"
+                                    ],
+                                    "index": "6",
+                                    "t": "dia"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "E2"
+                                ],
+                                "interface": "all",
+                                "index": "1.4",
+                                "E2": {
+                                    "original": "all",
+                                    "rule_match": [
+                                        "all"
+                                    ],
+                                    "index": "8",
+                                    "t": "all"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "E2"
+                                ],
+                                "interface": "alua",
+                                "index": "1.5",
+                                "E2": {
+                                    "original": "alua",
+                                    "rule_match": [
+                                        "alua"
+                                    ],
+                                    "index": "10",
+                                    "t": "alua"
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "E2"
+                        ],
+                        "_id": "f765c8592fbb3c193e7a2784cbdbd9ce"
+                    },
+                    {
+                        "label": "c",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q",
+                            "Ss"
+                        ],
+                        "_id": "cf0bf44a7794366e2ab38de302a854c1"
+                    }
+                ],
+                "_id": "9ddfdc659f08bc22ac7ed2d84d174a19"
+            },
+            {
+                "first_word_index": "2.1",
+                "end": 4,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "text": [
+                            {
+                                "reading": [
+                                    "Base",
+                                    "T"
+                                ],
+                                "Base": {
+                                    "original": "Mouierō",
+                                    "t": "Mouieron",
+                                    "rule_match": [
+                                        "Mouieron",
+                                        "Mouierō"
+                                    ],
+                                    "index": "2",
+                                    "expanded": "Mouieron"
+                                },
+                                "interface": "Mouieron",
+                                "index": "2.1",
+                                "T": {
+                                    "original": "Mouierō",
+                                    "t": "Mouieron",
+                                    "rule_match": [
+                                        "Mouieron",
+                                        "Mouierō"
+                                    ],
+                                    "index": "2",
+                                    "expanded": "Mouieron"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Base",
+                                    "T"
+                                ],
+                                "Base": {
+                                    "original": "dalli",
+                                    "rule_match": [
+                                        "dalli"
+                                    ],
+                                    "index": "4",
+                                    "t": "dalli"
+                                },
+                                "interface": "dalli",
+                                "index": "4.1",
+                                "T": {
+                                    "original": "dalli",
+                                    "rule_match": [
+                                        "dalli"
+                                    ],
+                                    "index": "4",
+                                    "t": "dalli"
+                                }
+                            }
+                        ],
+                        "suffixes": [
+                            "",
+                            "r",
+                            ""
+                        ],
+                        "standoff_subreadings": [
+                            "E2"
+                        ],
+                        "SR_text": {
+                            "E2": {
+                                "text": [
+                                    {
+                                        "reading": [
+                                            "E2"
+                                        ],
+                                        "interface": "mouieron",
+                                        "index": "5.4",
+                                        "E2": {
+                                            "original": "mouieron",
+                                            "interface": "mouieron",
+                                            "rule_match": [
+                                                "mouieron"
+                                            ],
+                                            "index": "12",
+                                            "t": "mouieron"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "E2"
+                                        ],
+                                        "interface": "dalli.",
+                                        "index": "5.5",
+                                        "E2": {
+                                            "original": "dalli.",
+                                            "interface": "dalli.",
+                                            "rule_match": [
+                                                "dalli."
+                                            ],
+                                            "index": "14",
+                                            "t": "dalli."
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "T"
+                        ],
+                        "_id": "2e94d58d3f1cce9f9703c74c4981af10"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q",
+                            "Ss"
+                        ],
+                        "_id": "1746cf6a6e1d8b6af1c767b59327c2c6"
+                    }
+                ],
+                "_id": "c8df5911f49c6c70562a21001208d0f6"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1476785199521
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D729S2900.json"
+}

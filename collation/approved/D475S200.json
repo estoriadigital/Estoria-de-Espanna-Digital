@@ -1,0 +1,439 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q",
+            "T",
+            "Ss"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D475S200",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "reading": "Base",
+                        "original": "¶",
+                        "rule_match": [
+                            "¶"
+                        ],
+                        "index": "2",
+                        "t": "¶"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "De",
+                        "rule_match": [
+                            "De"
+                        ],
+                        "index": "4",
+                        "t": "De"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "Ysmael;",
+                        "rule_match": [
+                            "Ysmael;"
+                        ],
+                        "index": "6",
+                        "t": "Ysmael;"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "salio",
+                        "rule_match": [
+                            "salio"
+                        ],
+                        "index": "8",
+                        "t": "salio"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "Caydar.",
+                        "rule_match": [
+                            "Caydar."
+                        ],
+                        "index": "10",
+                        "t": "Caydar."
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {
+            "regularised": [
+                {
+                    "name": [
+                        "Regularised"
+                    ],
+                    "start": 2,
+                    "identifier": [
+                        "r"
+                    ],
+                    "unit_id": "6c1bdb12a37b5f0b75937c594a5a4a59",
+                    "suffixed_sigla": [
+                        true
+                    ],
+                    "value": "regularised",
+                    "reading_text": "de ismael salio Caydar",
+                    "witness": "Ss",
+                    "end": 10,
+                    "parent_text": "¶ De Ysmael; salio Caydar.",
+                    "apparatus": "apparatus",
+                    "subreading": [
+                        false
+                    ],
+                    "suffixed_label": [
+                        false
+                    ]
+                }
+            ]
+        },
+        "hand_id_map": {
+            "Ss": "Ss",
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q",
+            "T": "T"
+        },
+        "event_list": [
+            "combine apparatus unit 0 with unit 1.",
+            "make offset reading of type regularised in apparatus unit 0 of reading 1 as a subreading of 9949d97314f15b9b3854e0800f09a276.",
+            "recombine readings in unit 0in  apparatus apparatus.",
+            "saved state"
+        ],
+        "om_readings": [
+            "E2",
+            "Q"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "2.1",
+                "end": 10,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "¶",
+                                    "rule_match": [
+                                        "¶"
+                                    ],
+                                    "index": "2",
+                                    "t": "¶"
+                                },
+                                "interface": "¶",
+                                "index": "2.1",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "T"
+                                ],
+                                "E1": {
+                                    "original": "¶",
+                                    "rule_match": [
+                                        "¶"
+                                    ],
+                                    "index": "2",
+                                    "t": "¶"
+                                },
+                                "T": {
+                                    "original": "¶",
+                                    "rule_match": [
+                                        "¶"
+                                    ],
+                                    "index": "2",
+                                    "t": "¶"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "De",
+                                    "rule_match": [
+                                        "De"
+                                    ],
+                                    "index": "4",
+                                    "t": "De"
+                                },
+                                "interface": "De",
+                                "index": "4",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "T"
+                                ],
+                                "E1": {
+                                    "original": "De",
+                                    "rule_match": [
+                                        "De"
+                                    ],
+                                    "index": "4",
+                                    "t": "De"
+                                },
+                                "T": {
+                                    "original": "De",
+                                    "rule_match": [
+                                        "De"
+                                    ],
+                                    "index": "4",
+                                    "t": "De"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "Ysmael;",
+                                    "rule_match": [
+                                        "Ysmael;"
+                                    ],
+                                    "index": "6",
+                                    "t": "Ysmael;"
+                                },
+                                "interface": "Ysmael;",
+                                "index": "6",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "T"
+                                ],
+                                "E1": {
+                                    "original": "Ysmael;",
+                                    "rule_match": [
+                                        "Ysmael;"
+                                    ],
+                                    "index": "6",
+                                    "t": "Ysmael;"
+                                },
+                                "T": {
+                                    "n": "Ysmael;",
+                                    "original": "ismael",
+                                    "decision_details": [
+                                        {
+                                            "n": "Ysmael;",
+                                            "class": "regularised",
+                                            "t": "ismael",
+                                            "scope": "once",
+                                            "_id": "verse_D475S200_9a5cb990-c569-44a6-8cfa-f5e024f9c889"
+                                        }
+                                    ],
+                                    "index": "6",
+                                    "t": "ismael",
+                                    "rule_match": [
+                                        "ismael"
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "salio",
+                                    "rule_match": [
+                                        "salio"
+                                    ],
+                                    "index": "8",
+                                    "t": "salio"
+                                },
+                                "interface": "salio",
+                                "index": "8",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "T"
+                                ],
+                                "E1": {
+                                    "original": "salio",
+                                    "rule_match": [
+                                        "salio"
+                                    ],
+                                    "index": "8",
+                                    "t": "salio"
+                                },
+                                "T": {
+                                    "original": "salio",
+                                    "rule_match": [
+                                        "salio"
+                                    ],
+                                    "index": "8",
+                                    "t": "salio"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "Caydar.",
+                                    "rule_match": [
+                                        "Caydar."
+                                    ],
+                                    "index": "10",
+                                    "t": "Caydar."
+                                },
+                                "interface": "Caydar.",
+                                "index": "10",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "T"
+                                ],
+                                "E1": {
+                                    "original": "Caydar.",
+                                    "rule_match": [
+                                        "Caydar."
+                                    ],
+                                    "index": "10",
+                                    "t": "Caydar."
+                                },
+                                "T": {
+                                    "original": "Caydar.",
+                                    "rule_match": [
+                                        "Caydar."
+                                    ],
+                                    "index": "10",
+                                    "t": "Caydar."
+                                }
+                            }
+                        ],
+                        "suffixes": [
+                            "",
+                            "",
+                            "r",
+                            "r"
+                        ],
+                        "standoff_subreadings": [
+                            "Ss"
+                        ],
+                        "SR_text": {
+                            "Ss": {
+                                "text": [
+                                    {
+                                        "reading": [
+                                            "Ss"
+                                        ],
+                                        "interface": "de",
+                                        "index": "4",
+                                        "Ss": {
+                                            "n": "De",
+                                            "interface": "de",
+                                            "rule_match": [
+                                                "de"
+                                            ],
+                                            "index": "2",
+                                            "t": "de",
+                                            "original": "de"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "Ss"
+                                        ],
+                                        "interface": "ismael",
+                                        "index": "6",
+                                        "Ss": {
+                                            "n": "Ysmael;",
+                                            "interface": "ismael",
+                                            "rule_match": [
+                                                "ismael"
+                                            ],
+                                            "index": "4",
+                                            "t": "ismael",
+                                            "original": "ismael"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "Ss"
+                                        ],
+                                        "interface": "salio",
+                                        "index": "8",
+                                        "Ss": {
+                                            "original": "salio",
+                                            "interface": "salio",
+                                            "rule_match": [
+                                                "salio"
+                                            ],
+                                            "index": "6",
+                                            "t": "salio"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "Ss"
+                                        ],
+                                        "interface": "Caydar",
+                                        "index": "10",
+                                        "Ss": {
+                                            "n": "Caydar.",
+                                            "interface": "Caydar",
+                                            "rule_match": [
+                                                "Caydar"
+                                            ],
+                                            "index": "8",
+                                            "t": "Caydar",
+                                            "original": "Caydar"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "witnesses": [
+                            "Base",
+                            "E1",
+                            "Ss",
+                            "T"
+                        ],
+                        "_id": "9949d97314f15b9b3854e0800f09a276"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E2",
+                            "Q"
+                        ],
+                        "_id": "9b7b4b2585888e836de5e1f3a5759a97"
+                    }
+                ],
+                "_id": "6c1bdb12a37b5f0b75937c594a5a4a59"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1469447497402
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D475S200.json"
+}

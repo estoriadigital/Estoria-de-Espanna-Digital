@@ -1,0 +1,225 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q",
+            "T",
+            "Ss"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D723S3700",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "expanded": "non",
+                        "rule_match": [
+                            "non",
+                            "nō"
+                        ],
+                        "index": "2",
+                        "t": "non",
+                        "reading": "Base",
+                        "original": "nō"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "temades",
+                        "rule_match": [
+                            "temades"
+                        ],
+                        "index": "4",
+                        "t": "temades"
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {},
+        "hand_id_map": {
+            "Ss": "Ss",
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q",
+            "T": "T"
+        },
+        "event_list": [
+            "saved state"
+        ],
+        "om_readings": [
+            "E1",
+            "Q",
+            "Ss"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "2",
+                "end": 4,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "r",
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "nō",
+                                    "t": "non",
+                                    "rule_match": [
+                                        "non",
+                                        "nō"
+                                    ],
+                                    "index": "2",
+                                    "expanded": "non"
+                                },
+                                "interface": "non",
+                                "index": "2",
+                                "reading": [
+                                    "Base",
+                                    "T",
+                                    "E2"
+                                ],
+                                "E2": {
+                                    "original": "Non",
+                                    "rule_match": [
+                                        "Non"
+                                    ],
+                                    "index": "2",
+                                    "t": "Non",
+                                    "decision_details": [
+                                        {
+                                            "n": "non",
+                                            "class": "regularised",
+                                            "t": "Non",
+                                            "scope": "once",
+                                            "_id": "verse_D729S3700_2540683b-ea94-4ee3-8f4f-ca452ce623d1"
+                                        }
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                },
+                                "T": {
+                                    "original": "nō",
+                                    "t": "non",
+                                    "rule_match": [
+                                        "non",
+                                        "nō"
+                                    ],
+                                    "index": "2",
+                                    "expanded": "non"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "temades",
+                                    "rule_match": [
+                                        "temades"
+                                    ],
+                                    "index": "4",
+                                    "t": "temades"
+                                },
+                                "interface": "temades",
+                                "index": "4",
+                                "reading": [
+                                    "Base",
+                                    "T",
+                                    "E2"
+                                ],
+                                "E2": {
+                                    "n": "temades",
+                                    "original": "temades.",
+                                    "decision_details": [
+                                        {
+                                            "n": "temades",
+                                            "class": "regularised",
+                                            "t": "temades.",
+                                            "scope": "once",
+                                            "_id": "verse_D729S3700_9a34b6e4-96fe-4e65-a5d1-839bea61d913"
+                                        }
+                                    ],
+                                    "index": "4",
+                                    "t": "temades.",
+                                    "rule_match": [
+                                        "temades."
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                },
+                                "T": {
+                                    "original": "temades",
+                                    "rule_match": [
+                                        "temades"
+                                    ],
+                                    "index": "4",
+                                    "t": "temades"
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "T"
+                        ],
+                        "_id": "2a21d11d9d2709059e3009e5ce267ad4"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q",
+                            "Ss"
+                        ],
+                        "_id": "1746cf6a6e1d8b6af1c767b59327c2c6"
+                    }
+                ],
+                "_id": "047f3058e50d379c9ceb4ec81aa3f9ff"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1476785512699
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D729S3700.json"
+}

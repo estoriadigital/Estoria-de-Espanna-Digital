@@ -1,0 +1,717 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q",
+            "T",
+            "Ss"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D615SRubric",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "reading": "Base",
+                        "original": "De",
+                        "rule_match": [
+                            "De"
+                        ],
+                        "index": "2",
+                        "t": "De"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "la",
+                        "rule_match": [
+                            "la"
+                        ],
+                        "index": "4",
+                        "t": "la"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "muerte",
+                        "rule_match": [
+                            "muerte"
+                        ],
+                        "index": "6",
+                        "t": "muerte"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "del",
+                        "rule_match": [
+                            "del"
+                        ],
+                        "index": "8",
+                        "t": "del"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "Rey",
+                        "rule_match": [
+                            "Rey"
+                        ],
+                        "index": "10",
+                        "t": "Rey"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "Silo.",
+                        "rule_match": [
+                            "Silo."
+                        ],
+                        "index": "12",
+                        "t": "Silo."
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {
+            "regularised": [
+                {
+                    "name": [
+                        "Regularised"
+                    ],
+                    "start": 2,
+                    "identifier": [
+                        "r"
+                    ],
+                    "unit_id": "2cd9cc487ee2a0e128794a252912f902",
+                    "suffixed_sigla": [
+                        true
+                    ],
+                    "value": "regularised",
+                    "reading_text": "Dela muerte del rey Silo⸫",
+                    "witness": "T",
+                    "end": 12,
+                    "parent_text": "De la muerte del Rey Silo.",
+                    "apparatus": "apparatus",
+                    "subreading": [
+                        false
+                    ],
+                    "suffixed_label": [
+                        false
+                    ]
+                }
+            ]
+        },
+        "hand_id_map": {
+            "Ss": "Ss",
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q",
+            "T": "T"
+        },
+        "event_list": [
+            "combine apparatus unit 0 with unit 1.",
+            "combine apparatus unit 0 with unit 1.",
+            "move reading 1 with witnesses Base, E2, Ss from unit 0 to index 1 in apparatus.",
+            "recombine readings in unit 1in  apparatus apparatus.",
+            "combine apparatus unit 1 with unit 2.",
+            "combine apparatus unit 1 with unit 2.",
+            "combine apparatus unit 1 with unit 2.",
+            "combine apparatus unit 1 with unit 2.",
+            "combine apparatus unit 1 with unit 2.",
+            "combine apparatus unit 1 with unit 2.",
+            "combine apparatus unit 1 with unit 2.",
+            "combine apparatus unit 1 with unit 2.",
+            "make offset reading of type regularised in apparatus unit 1 of reading 2 as a subreading of 64c44b48176a57a7b61fc2195cd9d1dd.",
+            "recombine readings in unit 1in  apparatus apparatus.",
+            "saved state"
+        ],
+        "om_readings": [
+            "E1",
+            "Q"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "1.1",
+                "end": 1,
+                "start": 1,
+                "readings": [
+                    {
+                        "label": "a",
+                        "text": [],
+                        "type": "om",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "Ss"
+                        ],
+                        "_id": "d89ada08e0f63ae0e4d184b3e9fa8318"
+                    },
+                    {
+                        "label": "b",
+                        "suffixes": [
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "reading": [
+                                    "T"
+                                ],
+                                "interface": "El",
+                                "index": "1.1",
+                                "T": {
+                                    "original": "El",
+                                    "rule_match": [
+                                        "El"
+                                    ],
+                                    "index": "2",
+                                    "t": "El"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "T"
+                                ],
+                                "interface": "ijº.",
+                                "index": "1.2",
+                                "T": {
+                                    "original": "ijº.",
+                                    "rule_match": [
+                                        "ijº."
+                                    ],
+                                    "index": "4",
+                                    "t": "ijº."
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "T"
+                                ],
+                                "interface": "capitulo",
+                                "index": "1.3",
+                                "T": {
+                                    "original": "cº.",
+                                    "t": "capitulo",
+                                    "rule_match": [
+                                        "capitulo",
+                                        "cº."
+                                    ],
+                                    "index": "6",
+                                    "expanded": "capitulo"
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "T"
+                        ],
+                        "_id": "73d1c244e6f2f7198ea2c4bb855cb842"
+                    },
+                    {
+                        "label": "c",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "c2d119374e882c5017eaa0321d79fe6d"
+                    }
+                ],
+                "_id": "fc32474b3efcacd6bdb5ec36241e667b"
+            },
+            {
+                "first_word_index": "2.1",
+                "end": 12,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "text": [
+                            {
+                                "reading": [
+                                    "Base",
+                                    "E2"
+                                ],
+                                "Base": {
+                                    "original": "De",
+                                    "rule_match": [
+                                        "De"
+                                    ],
+                                    "index": "2",
+                                    "t": "De"
+                                },
+                                "interface": "De",
+                                "index": "2.1",
+                                "E2": {
+                                    "original": "De",
+                                    "rule_match": [
+                                        "De"
+                                    ],
+                                    "index": "2",
+                                    "t": "De"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Base",
+                                    "E2"
+                                ],
+                                "Base": {
+                                    "original": "la",
+                                    "rule_match": [
+                                        "la"
+                                    ],
+                                    "index": "4",
+                                    "t": "la"
+                                },
+                                "interface": "la",
+                                "index": "4.1",
+                                "E2": {
+                                    "original": "la",
+                                    "rule_match": [
+                                        "la"
+                                    ],
+                                    "index": "4",
+                                    "t": "la"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Base",
+                                    "E2"
+                                ],
+                                "Base": {
+                                    "original": "muerte",
+                                    "rule_match": [
+                                        "muerte"
+                                    ],
+                                    "index": "6",
+                                    "t": "muerte"
+                                },
+                                "interface": "muerte",
+                                "index": "6.1",
+                                "E2": {
+                                    "original": "muerte",
+                                    "rule_match": [
+                                        "muerte"
+                                    ],
+                                    "index": "6",
+                                    "t": "muerte"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Base",
+                                    "E2"
+                                ],
+                                "Base": {
+                                    "original": "del",
+                                    "rule_match": [
+                                        "del"
+                                    ],
+                                    "index": "8",
+                                    "t": "del"
+                                },
+                                "interface": "del",
+                                "index": "8.1",
+                                "E2": {
+                                    "original": "del",
+                                    "rule_match": [
+                                        "del"
+                                    ],
+                                    "index": "8",
+                                    "t": "del"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Base",
+                                    "E2"
+                                ],
+                                "Base": {
+                                    "original": "Rey",
+                                    "rule_match": [
+                                        "Rey"
+                                    ],
+                                    "index": "10",
+                                    "t": "Rey"
+                                },
+                                "interface": "Rey",
+                                "index": "10.1",
+                                "E2": {
+                                    "original": "Rey",
+                                    "rule_match": [
+                                        "Rey"
+                                    ],
+                                    "index": "10",
+                                    "t": "Rey"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Base",
+                                    "E2"
+                                ],
+                                "Base": {
+                                    "original": "Silo.",
+                                    "rule_match": [
+                                        "Silo."
+                                    ],
+                                    "index": "12",
+                                    "t": "Silo."
+                                },
+                                "interface": "Silo.",
+                                "index": "12.1",
+                                "E2": {
+                                    "original": "Silo.",
+                                    "rule_match": [
+                                        "Silo."
+                                    ],
+                                    "index": "12",
+                                    "t": "Silo."
+                                }
+                            }
+                        ],
+                        "suffixes": [
+                            "",
+                            "",
+                            "r"
+                        ],
+                        "standoff_subreadings": [
+                            "T"
+                        ],
+                        "SR_text": {
+                            "T": {
+                                "text": [
+                                    {
+                                        "reading": [
+                                            "T"
+                                        ],
+                                        "interface": "Dela",
+                                        "index": "4.1",
+                                        "T": {
+                                            "original": "Dela",
+                                            "interface": "Dela",
+                                            "rule_match": [
+                                                "Dela"
+                                            ],
+                                            "index": "8",
+                                            "t": "Dela"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "T"
+                                        ],
+                                        "interface": "muerte",
+                                        "index": "6.1",
+                                        "T": {
+                                            "original": "muerte",
+                                            "interface": "muerte",
+                                            "rule_match": [
+                                                "muerte"
+                                            ],
+                                            "index": "10",
+                                            "t": "muerte"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "T"
+                                        ],
+                                        "interface": "del",
+                                        "index": "8.1",
+                                        "T": {
+                                            "original": "del",
+                                            "interface": "del",
+                                            "rule_match": [
+                                                "del"
+                                            ],
+                                            "index": "12",
+                                            "t": "del"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "T"
+                                        ],
+                                        "interface": "rey",
+                                        "index": "10.1",
+                                        "T": {
+                                            "n": "Rey",
+                                            "interface": "rey",
+                                            "rule_match": [
+                                                "rey"
+                                            ],
+                                            "index": "14",
+                                            "t": "rey",
+                                            "original": "rey"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "T"
+                                        ],
+                                        "interface": "Silo⸫",
+                                        "index": "12.1",
+                                        "T": {
+                                            "n": "Silo.",
+                                            "interface": "Silo⸫",
+                                            "rule_match": [
+                                                "Silo⸫"
+                                            ],
+                                            "index": "16",
+                                            "t": "Silo⸫",
+                                            "original": "Silo⸫"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "T"
+                        ],
+                        "_id": "64c44b48176a57a7b61fc2195cd9d1dd"
+                    },
+                    {
+                        "label": "b",
+                        "suffixes": [
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "reading": [
+                                    "Ss"
+                                ],
+                                "interface": "de",
+                                "index": "2.1",
+                                "Ss": {
+                                    "original": "de",
+                                    "rule_match": [
+                                        "de"
+                                    ],
+                                    "index": "2",
+                                    "t": "de"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Ss"
+                                ],
+                                "interface": "commo",
+                                "index": "2.2",
+                                "Ss": {
+                                    "original": "com̄o",
+                                    "t": "commo",
+                                    "rule_match": [
+                                        "commo",
+                                        "com̄o"
+                                    ],
+                                    "index": "4",
+                                    "expanded": "commo"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Ss"
+                                ],
+                                "interface": "murio",
+                                "index": "2.3",
+                                "Ss": {
+                                    "original": "murio",
+                                    "rule_match": [
+                                        "murio"
+                                    ],
+                                    "index": "6",
+                                    "t": "murio"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Ss"
+                                ],
+                                "interface": "el",
+                                "index": "4.1",
+                                "Ss": {
+                                    "original": "el",
+                                    "rule_match": [
+                                        "el"
+                                    ],
+                                    "index": "8",
+                                    "t": "el"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Ss"
+                                ],
+                                "interface": "rrey",
+                                "index": "6.1",
+                                "Ss": {
+                                    "original": "Rey",
+                                    "t": "rrey",
+                                    "rule_match": [
+                                        "rrey",
+                                        "Rey"
+                                    ],
+                                    "index": "10",
+                                    "expanded": "rrey"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Ss"
+                                ],
+                                "interface": "silo",
+                                "index": "7.1",
+                                "Ss": {
+                                    "original": "silo",
+                                    "rule_match": [
+                                        "silo"
+                                    ],
+                                    "index": "12",
+                                    "t": "silo"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Ss"
+                                ],
+                                "interface": "E",
+                                "index": "8.1",
+                                "Ss": {
+                                    "original": "E",
+                                    "rule_match": [
+                                        "E"
+                                    ],
+                                    "index": "14",
+                                    "t": "E"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Ss"
+                                ],
+                                "interface": "fue",
+                                "index": "9.1",
+                                "Ss": {
+                                    "original": "fue",
+                                    "rule_match": [
+                                        "fue"
+                                    ],
+                                    "index": "16",
+                                    "t": "fue"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Ss"
+                                ],
+                                "interface": "enterrado",
+                                "index": "9.2",
+                                "Ss": {
+                                    "original": "enterrado",
+                                    "rule_match": [
+                                        "enterrado"
+                                    ],
+                                    "index": "18",
+                                    "t": "enterrado"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Ss"
+                                ],
+                                "interface": "en",
+                                "index": "10.1",
+                                "Ss": {
+                                    "original": "en",
+                                    "rule_match": [
+                                        "en"
+                                    ],
+                                    "index": "20",
+                                    "t": "en"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Ss"
+                                ],
+                                "interface": "ouiedo.",
+                                "index": "12.1",
+                                "Ss": {
+                                    "original": "ouiedo.",
+                                    "rule_match": [
+                                        "ouiedo."
+                                    ],
+                                    "index": "22",
+                                    "t": "ouiedo."
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Ss"
+                        ],
+                        "_id": "3342f3040d6cc5f24d772eb62e225573"
+                    },
+                    {
+                        "label": "c",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "f7284f90f1a54fbefc58cdc258167ce8"
+                    }
+                ],
+                "_id": "2cd9cc487ee2a0e128794a252912f902"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1475255662675
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D615SRubric.json"
+}

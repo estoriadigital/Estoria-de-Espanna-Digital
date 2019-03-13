@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109855411-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'UA-109855411-1');
+	</script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Estoria de Espanna Digital</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="static/packages/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap stuff not used anymore I don't think -->
+    <!-- Combobox -->
+    <!--<link href="/home/cat/estoria/edition/static/css/bootstrap-combobox.css" rel="stylesheet" type="text/css">-->
+    <!-- Switch -->
+    <!--<link href="/home/cat/estoria/edition/dist/switch/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet" type="text/css">-->
+
+    <!-- MetisMenu CSS -->
+    <link href="static/packages/metismenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="static/packages/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Gridstack -->
+    <link href="static/packages/gridstack/gridstack.css" rel="stylesheet" type="text/css">
+
+    <!-- Tooltipster -->
+    <link href="static/packages/tooltipster/dist/css/tooltipster.bundle.min.css" rel="stylesheet" type="text/css">
+    <link href="static/packages/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Estoria -->
+    <!--<link href="/home/cat/estoria/edition/dist/css/toggle.css" rel="stylesheet" type="text/css">-->
+    <link href="static/css/estoria.css" rel="stylesheet" type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.estoria.bham.ac.uk">Estoria de Espanna Digital</a>
+        </div>
+
+        <!-- /.navbar-header -->
+        <ul class="nav navbar-top-links navbar-left">
+
+          <li id="li-critical" class="pagemenu">
+            <select id="pageselect-critical" class="form-control">
+              <option value="title">VPE</option>
+            </select>
+          </li>
+          <li id="li-reader" class="pagemenu">
+            <select id="pageselect-reader" class="form-control">
+              <option value="title">VPL</option>
+            </select>
+          </li>
+          <li id="li-E1" class="pagemenu">
+            <select id="pageselect-E1" class="form-control">
+              <option value="title">E1</option>
+            </select>
+          </li>
+          <li id="li-E2" class="pagemenu">
+            <select id="pageselect-E2" class="form-control">
+              <option value="title">E2</option>
+            </select>
+          </li>
+          <li id="li-Q" class="pagemenu">
+            <select id="pageselect-Q" class="form-control">
+              <option value="title">Q</option>
+            </select>
+          </li>
+          <li id="li-Ss" class="pagemenu">
+            <select id="pageselect-Ss" class="form-control">
+              <option value="title">Ss</option>
+            </select>
+          </li>
+          <li id="li-T" class="pagemenu">
+            <select id="pageselect-T" class="form-control">
+              <option value="title">T</option>
+            </select>
+          </li>
+          <li id="li-Y" class="pagemenu">
+            <select id="pageselect-Y" class="form-control">
+              <option value="title">Y</option>
+            </select>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-top-links navbar-right">
+            <!-- /.navbar-static-side -->
+            <li >
+                <a id="index_toggle">
+                  Indice
+                </a>
+                
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+      
+      <div id="index_sidebar" class="navbar-default sidebar" style="display:none" role="navigation">
+        <div class="sidebar-nav"> 
+            <ul class="nav" id="side-menu">
+
+            </ul>
+        </div>
+    </div>
+    </nav>
+      <!-- Page Content -->
+      <div id="page-wrapper">
+
+        <div class="container-fluid">
+          <p></p>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="grid-stack" id="gridcontainer" data-bind="component: {name: 'dashboard-grid', params: $data}">
+
+              </div>
+
+            </div>
+            <!-- /.col-lg-12 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+      <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <template id="gridstack-template">
+      <div class="grid-stack" data-bind="foreach: {data: widgets, afterRender: afterAddWidget}">
+        <div class="grid-stack-item" data-bind="attr: {'data-gs-x': $data.x, 'data-gs-y': $data.y, 'data-gs-width': $data.width, 'data-gs-height': $data.height, 'data-gs-auto-position': $data.auto_position, 'data-gs-id': $data.id}">
+          <div class="grid-stack-item-content panel panel-default">
+            <div class="panel-heading">
+              <span class="previous_button" data-bind="visible: previous">
+                <button type="button" class="btn btn-default" aria-label="previous" data-bind="click: previous_page">
+                  <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                </button>
+              </span>
+              <span class="innercamera"  data-bind="if: $data.has_image">
+                <button type="button" class="btn btn-default transcription-image-button" aria-label="image"
+                        data-bind="attr: {'data-manuscript': $data.manuscript, 'data.page': $data.page}, click: $root.show_image">
+                  <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+                </button>
+              </span>
+              <span class="innereye" data-bind="if: $data.has_eye">
+                <button type="button" class="btn btn-default transcription-eye-button" aria-label="hide"
+                        data-bind="click: $root.hide_abbrev">
+                  <span class="glyphicon glyphicon-eye-open eye" aria-hidden="true"></span>
+                </button>
+              </span>
+              <span class="innerheader">
+                <span class="feature-title" data-bind="text: long_feature_name"></span>
+                &nbsp;-&nbsp;
+                <span data-bind="if: manuscript">
+                <span class="manuscript-title" data-bind="text: manuscript"></span>,&nbsp;</span>
+                <span data-bind="if: page">Page:&nbsp;</span>
+                <span class="page-title" data-bind="text: page"></span>
+              </span>
+              <span class="next_button" data-bind="visible: next">
+                <button type="button" class="btn btn-default" aria-label="next" data-bind="click: next_page">
+                  <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                </button>
+              </span>
+              <button class="close-thin" data-bind="click: $root.delete_widget"></button>
+            </div>
+            <div class="panel-body">
+              <span class="innerbody" data-bind="html: $data.body"></span>
+              <span data-bind="if: $data.is_image">
+                <img class="innerimage" data-bind="attr:{src: $data.filename}" />
+              </span>
+            </div>
+          </div>
+      </div></div><!-- NO SPACE BETWEEN THESE CLOSING TAGS -->
+    </template>
+
+
+    <!-- jQuery -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/packages/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/packages/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js"></script>
+    <!-- Gridstack -->
+    <script src="static/packages/gridstack/gridstack.min.js"></script>
+
+    
+
+    <!-- Menu items -->
+    <script src="static/data/menu_data.js"></script>
+    <script src="static/data/reader_pages.js"></script>
+    <script src="static/data/critical_pages.js"></script>
+
+    <!-- Estoria -->
+    <script src="static/js/estoria.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="static/packages/metismenu/dist/metisMenu.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="static/js/sb-admin-2.js"></script>
+    
+    <!-- tooltipster -->
+    <script src="static/packages/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+
+    <!-- Switch -->
+    <!--<script src="/home/cat/estoria/edition/dist/switch/js/bootstrap-switch.min.js"></script>-->
+    <!-- Menu dropdown -->
+    <!--<script src="/home/cat/estoria/edition/static/js/bootstrap-combobox.js"></script>-->
+
+
+  </body>
+
+</html>

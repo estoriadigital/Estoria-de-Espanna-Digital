@@ -1,0 +1,239 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D13S800",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "reading": "Base",
+                        "original": "Tharcus",
+                        "rule_match": [
+                            "Tharcus"
+                        ],
+                        "index": "2",
+                        "t": "Tharcus"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "atregolos.",
+                        "rule_match": [
+                            "atregolos."
+                        ],
+                        "index": "4",
+                        "t": "atregolos."
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {},
+        "hand_id_map": {
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q"
+        },
+        "event_list": [
+            "combine apparatus unit 2 with unit 3.",
+            "combine apparatus unit 0 with unit 1.",
+            "combine apparatus unit 0 with unit 1.",
+            "saved state"
+        ],
+        "om_readings": [
+            "E2"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "2.1",
+                "end": 4,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "reading": [
+                                    "Base",
+                                    "E1"
+                                ],
+                                "Base": {
+                                    "original": "Tharcus",
+                                    "rule_match": [
+                                        "Tharcus"
+                                    ],
+                                    "index": "2",
+                                    "t": "Tharcus"
+                                },
+                                "interface": "Tharcus",
+                                "E1": {
+                                    "original": "Tharcus",
+                                    "rule_match": [
+                                        "Tharcus"
+                                    ],
+                                    "index": "2",
+                                    "t": "Tharcus"
+                                },
+                                "index": "2.1"
+                            },
+                            {
+                                "reading": [
+                                    "Base",
+                                    "E1"
+                                ],
+                                "Base": {
+                                    "original": "atregolos.",
+                                    "rule_match": [
+                                        "atregolos."
+                                    ],
+                                    "index": "4",
+                                    "t": "atregolos."
+                                },
+                                "interface": "atregolos.",
+                                "E1": {
+                                    "original": "atregolos.",
+                                    "rule_match": [
+                                        "atregolos."
+                                    ],
+                                    "index": "4",
+                                    "t": "atregolos."
+                                },
+                                "index": "4.1"
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E1"
+                        ],
+                        "_id": "7a43ac9e77fba832bac9a5f34dc7fac5"
+                    },
+                    {
+                        "label": "b",
+                        "suffixes": [
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "reading": [
+                                    "Q"
+                                ],
+                                "interface": "desi",
+                                "index": "2.1",
+                                "Q": {
+                                    "original": "desi",
+                                    "rule_match": [
+                                        "desi"
+                                    ],
+                                    "index": "2",
+                                    "t": "desi"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Q"
+                                ],
+                                "interface": "Tharcus",
+                                "index": "2.2",
+                                "Q": {
+                                    "original": "Tharcus",
+                                    "rule_match": [
+                                        "Tharcus"
+                                    ],
+                                    "index": "4",
+                                    "t": "Tharcus"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Q"
+                                ],
+                                "interface": "los",
+                                "index": "4.1",
+                                "Q": {
+                                    "original": "los",
+                                    "rule_match": [
+                                        "los"
+                                    ],
+                                    "index": "6",
+                                    "t": "los"
+                                }
+                            },
+                            {
+                                "reading": [
+                                    "Q"
+                                ],
+                                "interface": "atrego.",
+                                "index": "4.2",
+                                "Q": {
+                                    "original": "atrego.",
+                                    "rule_match": [
+                                        "atrego."
+                                    ],
+                                    "index": "8",
+                                    "t": "atrego."
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Q"
+                        ],
+                        "_id": "019428f02948ba261bfb16351afca11d"
+                    },
+                    {
+                        "label": "c",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E2"
+                        ],
+                        "_id": "f47a6656571895197f5ff6a3addf4492"
+                    }
+                ],
+                "_id": "e422fbd387ade9d0a36a9c7efd4c09a9"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1452871441315
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D13S800.json"
+}

@@ -1,0 +1,830 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q",
+            "T",
+            "Ss"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D600S1500",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "reading": "Base",
+                        "original": "Mas",
+                        "rule_match": [
+                            "Mas"
+                        ],
+                        "index": "2",
+                        "t": "Mas"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "siempre",
+                        "rule_match": [
+                            "siempre"
+                        ],
+                        "index": "4",
+                        "t": "siempre"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "fue",
+                        "rule_match": [
+                            "fue"
+                        ],
+                        "index": "6",
+                        "t": "fue"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "malandante",
+                        "rule_match": [
+                            "malandante"
+                        ],
+                        "index": "8",
+                        "t": "malandante"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "ell",
+                        "rule_match": [
+                            "ell"
+                        ],
+                        "index": "10",
+                        "t": "ell"
+                    },
+                    {
+                        "expanded": "e",
+                        "rule_match": [
+                            "e",
+                            "⁊"
+                        ],
+                        "index": "12",
+                        "t": "e",
+                        "reading": "Base",
+                        "original": "⁊"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "todos",
+                        "rule_match": [
+                            "todos"
+                        ],
+                        "index": "14",
+                        "t": "todos"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "los",
+                        "rule_match": [
+                            "los"
+                        ],
+                        "index": "16",
+                        "t": "los"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "suyos.",
+                        "rule_match": [
+                            "suyos."
+                        ],
+                        "index": "18",
+                        "t": "suyos."
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {
+            "regularised": [
+                {
+                    "name": [
+                        "Regularised"
+                    ],
+                    "start": 8,
+                    "identifier": [
+                        "r"
+                    ],
+                    "unit_id": "71531d9a3211badf84b2ff985e71fa12",
+                    "suffixed_sigla": [
+                        true
+                    ],
+                    "value": "regularised",
+                    "reading_text": "mal andante",
+                    "witness": "Ss",
+                    "end": 8,
+                    "parent_text": "malandante",
+                    "apparatus": "apparatus",
+                    "subreading": [
+                        false
+                    ],
+                    "suffixed_label": [
+                        false
+                    ]
+                }
+            ]
+        },
+        "hand_id_map": {
+            "Ss": "Ss",
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q",
+            "T": "T"
+        },
+        "event_list": [
+            "move reading 1 with witnesses Ss from unit 2 to unit 3 in apparatus.",
+            "recombine readings in unit 2in  apparatus apparatus.",
+            "make offset reading of type regularised in apparatus unit 3 of reading 1 as a subreading of 847e5c014cbc197f7c860f58a437eee5.",
+            "recombine readings in unit 3in  apparatus apparatus.",
+            "combine apparatus unit 4 with unit 5.",
+            "combine apparatus unit 4 with unit 5.",
+            "combine apparatus unit 4 with unit 5.",
+            "combine apparatus unit 4 with unit 5.",
+            "saved state"
+        ],
+        "om_readings": [
+            "E1",
+            "Q"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "2.1",
+                "end": 2,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "",
+                            "r",
+                            "r"
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "Mas",
+                                    "rule_match": [
+                                        "Mas"
+                                    ],
+                                    "index": "2",
+                                    "t": "Mas"
+                                },
+                                "interface": "Mas",
+                                "index": "2.1",
+                                "reading": [
+                                    "Base",
+                                    "E2",
+                                    "T",
+                                    "Ss"
+                                ],
+                                "E2": {
+                                    "original": "Mas",
+                                    "rule_match": [
+                                        "Mas"
+                                    ],
+                                    "index": "2",
+                                    "t": "Mas"
+                                },
+                                "Ss": {
+                                    "n": "Mas",
+                                    "original": "mas",
+                                    "decision_details": [
+                                        {
+                                            "n": "Mas",
+                                            "class": "regularised",
+                                            "t": "mas",
+                                            "scope": "once",
+                                            "_id": "verse_D600S1500_8a215f51-56c8-47e2-87ca-a040bd8417d5"
+                                        }
+                                    ],
+                                    "index": "2",
+                                    "t": "mas",
+                                    "rule_match": [
+                                        "mas"
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                },
+                                "T": {
+                                    "n": "Mas",
+                                    "original": "mas",
+                                    "decision_details": [
+                                        {
+                                            "n": "Mas",
+                                            "class": "regularised",
+                                            "t": "mas",
+                                            "scope": "once",
+                                            "_id": "verse_D600S1500_5f3c86b7-b400-4dd5-85c8-60d2b578e72a"
+                                        }
+                                    ],
+                                    "index": "2",
+                                    "t": "mas",
+                                    "rule_match": [
+                                        "mas"
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "Ss",
+                            "T"
+                        ],
+                        "_id": "f6affeb06cf11cf0d0325c750657706d"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "dfccff87006092ba38522fd106c304c2"
+                    }
+                ],
+                "_id": "95b880fe276967e5b2736f5ec95a1363"
+            },
+            {
+                "first_word_index": "4.1",
+                "end": 4,
+                "start": 4,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "",
+                            "r",
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "siempre",
+                                    "rule_match": [
+                                        "siempre"
+                                    ],
+                                    "index": "4",
+                                    "t": "siempre"
+                                },
+                                "interface": "siempre",
+                                "index": "4.1",
+                                "reading": [
+                                    "Base",
+                                    "E2",
+                                    "T",
+                                    "Ss"
+                                ],
+                                "E2": {
+                                    "original": "siempre",
+                                    "rule_match": [
+                                        "siempre"
+                                    ],
+                                    "index": "4",
+                                    "t": "siempre"
+                                },
+                                "Ss": {
+                                    "n": "siempre",
+                                    "original": "sienpre",
+                                    "decision_details": [
+                                        {
+                                            "n": "siempre",
+                                            "class": "regularised",
+                                            "t": "sienpre",
+                                            "scope": "once",
+                                            "_id": "verse_D600S1500_776b0c6a-a90b-4614-8f82-ca15bd2a4499"
+                                        }
+                                    ],
+                                    "index": "4",
+                                    "t": "sienpre",
+                                    "rule_match": [
+                                        "sienpre"
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                },
+                                "T": {
+                                    "original": "siemp̉",
+                                    "t": "siempre",
+                                    "rule_match": [
+                                        "siempre",
+                                        "siemp̉"
+                                    ],
+                                    "index": "4",
+                                    "expanded": "siempre"
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "Ss",
+                            "T"
+                        ],
+                        "_id": "beea0e461662e2f0139aef2a1618c50f"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "b43722cd122166f4db490f0d1cf19100"
+                    }
+                ],
+                "_id": "9284983f67c69e6da6489f062d3464a0"
+            },
+            {
+                "first_word_index": "6.1",
+                "end": 6,
+                "start": 6,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "fue",
+                                    "rule_match": [
+                                        "fue"
+                                    ],
+                                    "index": "6",
+                                    "t": "fue"
+                                },
+                                "interface": "fue",
+                                "index": "6.1",
+                                "reading": [
+                                    "Base",
+                                    "E2",
+                                    "T"
+                                ],
+                                "E2": {
+                                    "original": "fue",
+                                    "rule_match": [
+                                        "fue"
+                                    ],
+                                    "index": "6",
+                                    "t": "fue"
+                                },
+                                "T": {
+                                    "original": "fue",
+                                    "rule_match": [
+                                        "fue"
+                                    ],
+                                    "index": "6",
+                                    "t": "fue"
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "T"
+                        ],
+                        "_id": "c9279bf712f6c475af674bad7df20223"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om",
+                        "suffixes": [
+                            ""
+                        ],
+                        "witnesses": [
+                            "Ss"
+                        ],
+                        "_id": "2edfae9876db20f3f96bafb12e46004b"
+                    },
+                    {
+                        "label": "c",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "3558bca35d9c77a35902f22023bc5e7c"
+                    }
+                ],
+                "_id": "b675e63f24342bcc13f1075eb9b17cb6"
+            },
+            {
+                "first_word_index": "8.1",
+                "end": 8,
+                "start": 8,
+                "readings": [
+                    {
+                        "label": "a",
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "malandante",
+                                    "rule_match": [
+                                        "malandante"
+                                    ],
+                                    "index": "8",
+                                    "t": "malandante"
+                                },
+                                "interface": "malandante",
+                                "index": "8.1",
+                                "reading": [
+                                    "Base",
+                                    "E2",
+                                    "T"
+                                ],
+                                "E2": {
+                                    "original": "malandante",
+                                    "rule_match": [
+                                        "malandante"
+                                    ],
+                                    "index": "8",
+                                    "t": "malandante"
+                                },
+                                "T": {
+                                    "original": "malandante",
+                                    "rule_match": [
+                                        "malandante"
+                                    ],
+                                    "index": "8",
+                                    "t": "malandante"
+                                }
+                            }
+                        ],
+                        "suffixes": [
+                            "",
+                            "",
+                            "r",
+                            ""
+                        ],
+                        "standoff_subreadings": [
+                            "Ss"
+                        ],
+                        "SR_text": {
+                            "Ss": {
+                                "text": [
+                                    {
+                                        "reading": [
+                                            "Ss"
+                                        ],
+                                        "interface": "mal",
+                                        "index": "8.1",
+                                        "Ss": {
+                                            "original": "mal",
+                                            "interface": "mal",
+                                            "rule_match": [
+                                                "mal"
+                                            ],
+                                            "index": "6",
+                                            "t": "mal"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "Ss"
+                                        ],
+                                        "interface": "andante",
+                                        "index": "8.2",
+                                        "Ss": {
+                                            "original": "andant̄",
+                                            "interface": "andante",
+                                            "rule_match": [
+                                                "andante",
+                                                "andant̄"
+                                            ],
+                                            "index": "8",
+                                            "t": "andante",
+                                            "expanded": "andante"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "Ss",
+                            "T"
+                        ],
+                        "_id": "847e5c014cbc197f7c860f58a437eee5"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "7a07fcfd2e7784dd034be591e344a4ec"
+                    }
+                ],
+                "_id": "71531d9a3211badf84b2ff985e71fa12"
+            },
+            {
+                "first_word_index": "10.1",
+                "end": 18,
+                "start": 10,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "",
+                            "r"
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "ell",
+                                    "rule_match": [
+                                        "ell"
+                                    ],
+                                    "index": "10",
+                                    "t": "ell"
+                                },
+                                "interface": "ell",
+                                "index": "10.1",
+                                "reading": [
+                                    "Base",
+                                    "E2",
+                                    "T"
+                                ],
+                                "E2": {
+                                    "original": "ell",
+                                    "rule_match": [
+                                        "ell"
+                                    ],
+                                    "index": "10",
+                                    "t": "ell"
+                                },
+                                "T": {
+                                    "n": "ell",
+                                    "original": "el",
+                                    "decision_details": [
+                                        {
+                                            "n": "ell",
+                                            "class": "regularised",
+                                            "t": "el",
+                                            "scope": "once",
+                                            "_id": "verse_D600S1500_beb18628-17a5-4a04-8d83-dbb5dcc0d57a"
+                                        }
+                                    ],
+                                    "index": "10",
+                                    "t": "el",
+                                    "rule_match": [
+                                        "el"
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "⁊",
+                                    "t": "e",
+                                    "rule_match": [
+                                        "e",
+                                        "⁊"
+                                    ],
+                                    "index": "12",
+                                    "expanded": "e"
+                                },
+                                "interface": "e",
+                                "index": "12.1",
+                                "reading": [
+                                    "Base",
+                                    "E2",
+                                    "T"
+                                ],
+                                "E2": {
+                                    "original": "⁊",
+                                    "t": "e",
+                                    "rule_match": [
+                                        "e",
+                                        "⁊"
+                                    ],
+                                    "index": "12",
+                                    "expanded": "e"
+                                },
+                                "T": {
+                                    "original": "⁊",
+                                    "t": "e",
+                                    "rule_match": [
+                                        "e",
+                                        "⁊"
+                                    ],
+                                    "index": "12",
+                                    "expanded": "e"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "todos",
+                                    "rule_match": [
+                                        "todos"
+                                    ],
+                                    "index": "14",
+                                    "t": "todos"
+                                },
+                                "interface": "todos",
+                                "index": "14.1",
+                                "reading": [
+                                    "Base",
+                                    "E2",
+                                    "T"
+                                ],
+                                "E2": {
+                                    "original": "todos",
+                                    "rule_match": [
+                                        "todos"
+                                    ],
+                                    "index": "14",
+                                    "t": "todos"
+                                },
+                                "T": {
+                                    "original": "todos",
+                                    "rule_match": [
+                                        "todos"
+                                    ],
+                                    "index": "14",
+                                    "t": "todos"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "los",
+                                    "rule_match": [
+                                        "los"
+                                    ],
+                                    "index": "16",
+                                    "t": "los"
+                                },
+                                "interface": "los",
+                                "index": "16.1",
+                                "reading": [
+                                    "Base",
+                                    "E2",
+                                    "T"
+                                ],
+                                "E2": {
+                                    "original": "los",
+                                    "rule_match": [
+                                        "los"
+                                    ],
+                                    "index": "16",
+                                    "t": "los"
+                                },
+                                "T": {
+                                    "original": "los",
+                                    "rule_match": [
+                                        "los"
+                                    ],
+                                    "index": "16",
+                                    "t": "los"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "suyos.",
+                                    "rule_match": [
+                                        "suyos."
+                                    ],
+                                    "index": "18",
+                                    "t": "suyos."
+                                },
+                                "interface": "suyos.",
+                                "index": "18.1",
+                                "reading": [
+                                    "Base",
+                                    "E2",
+                                    "T"
+                                ],
+                                "E2": {
+                                    "original": "suyos.",
+                                    "rule_match": [
+                                        "suyos."
+                                    ],
+                                    "index": "18",
+                                    "t": "suyos."
+                                },
+                                "T": {
+                                    "original": "suyos.",
+                                    "rule_match": [
+                                        "suyos."
+                                    ],
+                                    "index": "18",
+                                    "t": "suyos."
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "T"
+                        ],
+                        "_id": "b62e277574d8917f66113f44a8865984"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om",
+                        "suffixes": [
+                            ""
+                        ],
+                        "witnesses": [
+                            "Ss"
+                        ],
+                        "_id": "190807ec4042eb2174582a4a20458b22"
+                    },
+                    {
+                        "label": "c",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "c5d80dd0da8a907bf8c56f1ea1e09227"
+                    }
+                ],
+                "_id": "1582f2779b3516cfa40aea21b043e19c"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1475067306322
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D600S1500.json"
+}

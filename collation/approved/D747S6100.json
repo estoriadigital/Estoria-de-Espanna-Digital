@@ -1,0 +1,206 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q",
+            "T",
+            "Ss"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D747S6100",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "reading": "Base",
+                        "original": "armas.",
+                        "rule_match": [
+                            "armas."
+                        ],
+                        "index": "2",
+                        "t": "armas."
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "armas.",
+                        "rule_match": [
+                            "armas."
+                        ],
+                        "index": "4",
+                        "t": "armas."
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {},
+        "hand_id_map": {
+            "Ss": "Ss",
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q",
+            "T": "T"
+        },
+        "event_list": [
+            "saved state"
+        ],
+        "om_readings": [
+            "E1",
+            "Q",
+            "Ss"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "2",
+                "end": 4,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "r",
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "armas.",
+                                    "rule_match": [
+                                        "armas."
+                                    ],
+                                    "index": "2",
+                                    "t": "armas."
+                                },
+                                "interface": "armas.",
+                                "index": "2",
+                                "reading": [
+                                    "Base",
+                                    "T",
+                                    "E2"
+                                ],
+                                "E2": {
+                                    "original": "Armas.",
+                                    "rule_match": [
+                                        "Armas."
+                                    ],
+                                    "index": "2",
+                                    "t": "Armas.",
+                                    "decision_details": [
+                                        {
+                                            "n": "armas.",
+                                            "class": "regularised",
+                                            "t": "Armas.",
+                                            "scope": "once",
+                                            "_id": "verse_D752S6100_03c51b2d-d317-49c5-a997-0fafb0c83c22"
+                                        }
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                },
+                                "T": {
+                                    "original": "armas.",
+                                    "rule_match": [
+                                        "armas."
+                                    ],
+                                    "index": "2",
+                                    "t": "armas."
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "armas.",
+                                    "rule_match": [
+                                        "armas."
+                                    ],
+                                    "index": "4",
+                                    "t": "armas."
+                                },
+                                "interface": "armas.",
+                                "index": "4",
+                                "reading": [
+                                    "Base",
+                                    "T",
+                                    "E2"
+                                ],
+                                "E2": {
+                                    "original": "armas.",
+                                    "rule_match": [
+                                        "armas."
+                                    ],
+                                    "index": "4",
+                                    "t": "armas."
+                                },
+                                "T": {
+                                    "original": "armas.",
+                                    "rule_match": [
+                                        "armas."
+                                    ],
+                                    "index": "4",
+                                    "t": "armas."
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "T"
+                        ],
+                        "_id": "08b502d6fa76c26746e49a947e4f1c05"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q",
+                            "Ss"
+                        ],
+                        "_id": "1746cf6a6e1d8b6af1c767b59327c2c6"
+                    }
+                ],
+                "_id": "885d924e0853cbf27e5419c3ab6a433d"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1477050225092
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D752S6100.json"
+}

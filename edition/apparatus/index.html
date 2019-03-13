@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Set this to the main language of your site -->
+<head>
+    <meta charset="utf-8">
+    <title>Estoria Apparatus Demo</title>
+    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="handlebars-v4.0.5.js"></script>
+    <script type="text/javascript" src="loadjson.js"></script>
+    <link rel="stylesheet" href="estoria.css" type="text/css">
+
+  </head>
+  <body>
+
+    <h1>Estoria Apparatus Demo</h1>
+    <p>Very simple view. Just to check we are getting the right text.</p>
+    <p>Note, words are in the German numbering (words are even, spaces are odd).</p>
+    
+    <script id="some-template" type="text/x-handlebars-template">
+        {{#apparati}}
+        <p><strong>{{start}} to {{end}}</strong></p>
+        <table>
+        <thead>
+          <th>Witnesses</th> 
+          <th>Text</th> 
+        </thead> 
+        <tbody> 
+          {{#readings}}
+          <tr>
+            <td>{{witnesses}}</td> 
+            <td>{{text}}</td> 
+          </tr> 
+          {{/readings}}
+        </tbody> 
+      </table> 
+        {{/apparati}} 
+        
+        
+    </script>
+  </body>
+  <script type="text/javascript" src="main.js"></script>
+</html>

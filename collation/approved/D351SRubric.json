@@ -1,0 +1,360 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D351SRubric",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "reading": "Base",
+                        "original": "Dell",
+                        "rule_match": [
+                            "Dell"
+                        ],
+                        "index": "2",
+                        "t": "Dell"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "anno",
+                        "rule_match": [
+                            "anno"
+                        ],
+                        "index": "4",
+                        "t": "anno"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "diziseteno.",
+                        "rule_match": [
+                            "diziseteno."
+                        ],
+                        "index": "6",
+                        "t": "diziseteno."
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {
+            "regularised": [
+                {
+                    "name": [
+                        "Regularised"
+                    ],
+                    "start": 6,
+                    "identifier": [
+                        "r"
+                    ],
+                    "unit_id": "c940b4a1d0990889482a48c5149c4240",
+                    "suffixed_sigla": [
+                        true
+                    ],
+                    "value": "regularised",
+                    "reading_text": "diez e seteno",
+                    "witness": "Q",
+                    "end": 6,
+                    "parent_text": "diziseteno.",
+                    "apparatus": "apparatus",
+                    "subreading": [
+                        false
+                    ],
+                    "suffixed_label": [
+                        false
+                    ]
+                }
+            ]
+        },
+        "hand_id_map": {
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q"
+        },
+        "event_list": [
+            "combine apparatus unit 2 with unit 3.",
+            "combine apparatus unit 1 with unit 2.",
+            "make offset reading of type regularised in apparatus unit 1 of reading 1 as a subreading of c21c9b15ff623087ca86e025265d6ce4.",
+            "recombine readings in unit 1in  apparatus apparatus.",
+            "saved state"
+        ],
+        "om_readings": [
+            "E2"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "2",
+                "end": 4,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "",
+                            "r"
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "Dell",
+                                    "rule_match": [
+                                        "Dell"
+                                    ],
+                                    "index": "2",
+                                    "t": "Dell"
+                                },
+                                "interface": "Dell",
+                                "index": "2",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "Q"
+                                ],
+                                "E1": {
+                                    "original": "Dell",
+                                    "rule_match": [
+                                        "Dell"
+                                    ],
+                                    "index": "2",
+                                    "t": "Dell"
+                                },
+                                "Q": {
+                                    "n": "Dell",
+                                    "original": "Del",
+                                    "decision_details": [
+                                        {
+                                            "n": "Dell",
+                                            "class": "regularised",
+                                            "t": "Del",
+                                            "scope": "once",
+                                            "_id": "verse_D351SRubric_40c44202-dd6e-452a-bdfe-9ae658ff91a0"
+                                        }
+                                    ],
+                                    "index": "2",
+                                    "t": "Del",
+                                    "rule_match": [
+                                        "Del"
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "anno",
+                                    "rule_match": [
+                                        "anno"
+                                    ],
+                                    "index": "4",
+                                    "t": "anno"
+                                },
+                                "interface": "anno",
+                                "index": "4",
+                                "reading": [
+                                    "Base",
+                                    "E1",
+                                    "Q"
+                                ],
+                                "E1": {
+                                    "original": "anno",
+                                    "rule_match": [
+                                        "anno"
+                                    ],
+                                    "index": "4",
+                                    "t": "anno"
+                                },
+                                "Q": {
+                                    "original": "an̄o",
+                                    "t": "anno",
+                                    "rule_match": [
+                                        "anno",
+                                        "an̄o"
+                                    ],
+                                    "index": "4",
+                                    "expanded": "anno"
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "9ed92d7b2409947fcad5040ab2108ce3"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E2"
+                        ],
+                        "_id": "f47a6656571895197f5ff6a3addf4492"
+                    }
+                ],
+                "_id": "8bf4e3fb7fdc48be69dcfe382ab1462e"
+            },
+            {
+                "first_word_index": "6.1",
+                "end": 6,
+                "start": 6,
+                "readings": [
+                    {
+                        "label": "a",
+                        "text": [
+                            {
+                                "reading": [
+                                    "Base",
+                                    "E1"
+                                ],
+                                "Base": {
+                                    "original": "diziseteno.",
+                                    "rule_match": [
+                                        "diziseteno."
+                                    ],
+                                    "index": "6",
+                                    "t": "diziseteno."
+                                },
+                                "interface": "diziseteno.",
+                                "E1": {
+                                    "original": "diziseteno.",
+                                    "rule_match": [
+                                        "diziseteno."
+                                    ],
+                                    "index": "6",
+                                    "t": "diziseteno."
+                                },
+                                "index": "6.1"
+                            }
+                        ],
+                        "suffixes": [
+                            "",
+                            "",
+                            "r"
+                        ],
+                        "standoff_subreadings": [
+                            "Q"
+                        ],
+                        "SR_text": {
+                            "Q": {
+                                "text": [
+                                    {
+                                        "reading": [
+                                            "Q"
+                                        ],
+                                        "interface": "diez",
+                                        "index": "6.1",
+                                        "Q": {
+                                            "original": "diez",
+                                            "interface": "diez",
+                                            "rule_match": [
+                                                "diez"
+                                            ],
+                                            "index": "6",
+                                            "t": "diez"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "Q"
+                                        ],
+                                        "interface": "e",
+                                        "index": "6.2",
+                                        "Q": {
+                                            "original": "⁊",
+                                            "interface": "e",
+                                            "rule_match": [
+                                                "e",
+                                                "⁊"
+                                            ],
+                                            "index": "8",
+                                            "t": "e",
+                                            "expanded": "e"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "Q"
+                                        ],
+                                        "interface": "seteno",
+                                        "index": "6.3",
+                                        "Q": {
+                                            "original": "seteno",
+                                            "interface": "seteno",
+                                            "rule_match": [
+                                                "seteno"
+                                            ],
+                                            "index": "10",
+                                            "t": "seteno"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "witnesses": [
+                            "Base",
+                            "E1",
+                            "Q"
+                        ],
+                        "_id": "c21c9b15ff623087ca86e025265d6ce4"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E2"
+                        ],
+                        "_id": "77af49d7f05cd2290c329e01b5823154"
+                    }
+                ],
+                "_id": "c940b4a1d0990889482a48c5149c4240"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1463757130743
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D351SRubric.json"
+}

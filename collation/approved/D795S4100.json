@@ -1,0 +1,509 @@
+{
+    "user": "default",
+    "data_settings": {
+        "witness_list": [
+            "Base",
+            "E1",
+            "E2",
+            "Q",
+            "T",
+            "Ss"
+        ],
+        "language": "grc",
+        "base_text": "Base",
+        "base_text_siglum": "Base"
+    },
+    "_model": "collation",
+    "project": "default",
+    "context": "D795S4100",
+    "structure": {
+        "overtext": [
+            {
+                "id": "Base",
+                "tokens": [
+                    {
+                        "expanded": "e",
+                        "rule_match": [
+                            "e",
+                            "⁊"
+                        ],
+                        "index": "2",
+                        "t": "e",
+                        "reading": "Base",
+                        "original": "⁊"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "fazie",
+                        "rule_match": [
+                            "fazie"
+                        ],
+                        "index": "4",
+                        "t": "fazie"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "castiellos",
+                        "rule_match": [
+                            "castiellos"
+                        ],
+                        "index": "6",
+                        "t": "castiellos"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "enlas",
+                        "rule_match": [
+                            "enlas"
+                        ],
+                        "index": "8",
+                        "t": "enlas"
+                    },
+                    {
+                        "reading": "Base",
+                        "original": "sierras",
+                        "rule_match": [
+                            "sierras"
+                        ],
+                        "index": "10",
+                        "t": "sierras"
+                    }
+                ]
+            }
+        ],
+        "marked_readings": {
+            "regularised": [
+                {
+                    "name": [
+                        "Regularised"
+                    ],
+                    "start": 8,
+                    "identifier": [
+                        "r"
+                    ],
+                    "unit_id": "8b397e2fb62602383c2b3190cd492597",
+                    "suffixed_sigla": [
+                        true
+                    ],
+                    "value": "regularised",
+                    "reading_text": "en las",
+                    "witness": "E2",
+                    "end": 8,
+                    "parent_text": "enlas",
+                    "apparatus": "apparatus",
+                    "subreading": [
+                        false
+                    ],
+                    "suffixed_label": [
+                        false
+                    ]
+                }
+            ]
+        },
+        "hand_id_map": {
+            "Ss": "Ss",
+            "Base": "Base",
+            "E1": "E1",
+            "E2": "E2",
+            "Q": "Q",
+            "T": "T"
+        },
+        "event_list": [
+            "combine apparatus unit 1 with unit 2.",
+            "make offset reading of type regularised in apparatus unit 1 of reading 1 as a subreading of 1ce0d47dbec7b112804ab265ad95e10d.",
+            "recombine readings in unit 1in  apparatus apparatus.",
+            "saved state"
+        ],
+        "om_readings": [
+            "E1",
+            "Q",
+            "Ss"
+        ],
+        "lac_readings": [],
+        "overtext_name": "Base",
+        "apparatus": [
+            {
+                "first_word_index": "2",
+                "end": 6,
+                "start": 2,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "r",
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "⁊",
+                                    "t": "e",
+                                    "rule_match": [
+                                        "e",
+                                        "⁊"
+                                    ],
+                                    "index": "2",
+                                    "expanded": "e"
+                                },
+                                "interface": "e",
+                                "index": "2",
+                                "reading": [
+                                    "Base",
+                                    "T",
+                                    "E2"
+                                ],
+                                "E2": {
+                                    "n": "e",
+                                    "original": "Et",
+                                    "decision_details": [
+                                        {
+                                            "n": "e",
+                                            "class": "regularised",
+                                            "t": "Et",
+                                            "scope": "once",
+                                            "_id": "verse_D803S4100_a26a3c12-bf34-4977-8e18-32a3a27bff33"
+                                        }
+                                    ],
+                                    "index": "2",
+                                    "t": "Et",
+                                    "rule_match": [
+                                        "Et"
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                },
+                                "T": {
+                                    "original": "⁊",
+                                    "t": "e",
+                                    "rule_match": [
+                                        "e",
+                                        "⁊"
+                                    ],
+                                    "index": "2",
+                                    "expanded": "e"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "fazie",
+                                    "rule_match": [
+                                        "fazie"
+                                    ],
+                                    "index": "4",
+                                    "t": "fazie"
+                                },
+                                "interface": "fazie",
+                                "index": "4",
+                                "reading": [
+                                    "Base",
+                                    "T",
+                                    "E2"
+                                ],
+                                "E2": {
+                                    "original": "fazie",
+                                    "rule_match": [
+                                        "fazie"
+                                    ],
+                                    "index": "4",
+                                    "t": "fazie"
+                                },
+                                "T": {
+                                    "original": "fazie",
+                                    "rule_match": [
+                                        "fazie"
+                                    ],
+                                    "index": "4",
+                                    "t": "fazie"
+                                }
+                            },
+                            {
+                                "Base": {
+                                    "original": "castiellos",
+                                    "rule_match": [
+                                        "castiellos"
+                                    ],
+                                    "index": "6",
+                                    "t": "castiellos"
+                                },
+                                "interface": "castiellos",
+                                "index": "6",
+                                "reading": [
+                                    "Base",
+                                    "T",
+                                    "E2"
+                                ],
+                                "E2": {
+                                    "original": "Castiellos",
+                                    "rule_match": [
+                                        "Castiellos"
+                                    ],
+                                    "index": "6",
+                                    "t": "Castiellos",
+                                    "decision_details": [
+                                        {
+                                            "n": "castiellos",
+                                            "class": "regularised",
+                                            "t": "Castiellos",
+                                            "scope": "once",
+                                            "_id": "verse_D803S4100_72b35cdc-6056-4e8f-bb13-191c42533bc5"
+                                        }
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                },
+                                "T": {
+                                    "original": "castiellos",
+                                    "rule_match": [
+                                        "castiellos"
+                                    ],
+                                    "index": "6",
+                                    "t": "castiellos"
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "T"
+                        ],
+                        "_id": "21d0bcaa50f3fbcedbd86cf5a9f5de51"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q",
+                            "Ss"
+                        ],
+                        "_id": "05c77f34787a2a58d0c409cfab4f1ec5"
+                    }
+                ],
+                "_id": "43bfb1e89e5363b4a6f30ad41fb65e21"
+            },
+            {
+                "first_word_index": "8.1",
+                "end": 8,
+                "start": 8,
+                "readings": [
+                    {
+                        "label": "a",
+                        "text": [
+                            {
+                                "reading": [
+                                    "Base",
+                                    "T"
+                                ],
+                                "Base": {
+                                    "original": "enlas",
+                                    "rule_match": [
+                                        "enlas"
+                                    ],
+                                    "index": "8",
+                                    "t": "enlas"
+                                },
+                                "interface": "enlas",
+                                "index": "8.1",
+                                "T": {
+                                    "original": "enlas",
+                                    "rule_match": [
+                                        "enlas"
+                                    ],
+                                    "index": "8",
+                                    "t": "enlas"
+                                }
+                            }
+                        ],
+                        "suffixes": [
+                            "",
+                            "r",
+                            ""
+                        ],
+                        "standoff_subreadings": [
+                            "E2"
+                        ],
+                        "SR_text": {
+                            "E2": {
+                                "text": [
+                                    {
+                                        "reading": [
+                                            "E2"
+                                        ],
+                                        "interface": "en",
+                                        "index": "8.1",
+                                        "E2": {
+                                            "original": "en",
+                                            "interface": "en",
+                                            "rule_match": [
+                                                "en"
+                                            ],
+                                            "index": "8",
+                                            "t": "en"
+                                        }
+                                    },
+                                    {
+                                        "reading": [
+                                            "E2"
+                                        ],
+                                        "interface": "las",
+                                        "index": "8.2",
+                                        "E2": {
+                                            "original": "las",
+                                            "interface": "las",
+                                            "rule_match": [
+                                                "las"
+                                            ],
+                                            "index": "10",
+                                            "t": "las"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "T"
+                        ],
+                        "_id": "1ce0d47dbec7b112804ab265ad95e10d"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q",
+                            "Ss"
+                        ],
+                        "_id": "ef5f5ecd485d62d45e48e295349d5a43"
+                    }
+                ],
+                "_id": "8b397e2fb62602383c2b3190cd492597"
+            },
+            {
+                "first_word_index": "10.1",
+                "end": 10,
+                "start": 10,
+                "readings": [
+                    {
+                        "label": "a",
+                        "suffixes": [
+                            "",
+                            "r",
+                            ""
+                        ],
+                        "text": [
+                            {
+                                "Base": {
+                                    "original": "sierras",
+                                    "rule_match": [
+                                        "sierras"
+                                    ],
+                                    "index": "10",
+                                    "t": "sierras"
+                                },
+                                "interface": "sierras",
+                                "index": "10.1",
+                                "reading": [
+                                    "Base",
+                                    "T",
+                                    "E2"
+                                ],
+                                "E2": {
+                                    "n": "sierras",
+                                    "original": "sierras.",
+                                    "decision_details": [
+                                        {
+                                            "n": "sierras",
+                                            "class": "regularised",
+                                            "t": "sierras.",
+                                            "scope": "once",
+                                            "_id": "verse_D803S4100_9f284c96-9ffd-432e-b4af-b256f96a86d7"
+                                        }
+                                    ],
+                                    "index": "12",
+                                    "t": "sierras.",
+                                    "rule_match": [
+                                        "sierras."
+                                    ],
+                                    "decision_class": [
+                                        "regularised"
+                                    ]
+                                },
+                                "T": {
+                                    "original": "sierras",
+                                    "rule_match": [
+                                        "sierras"
+                                    ],
+                                    "index": "10",
+                                    "t": "sierras"
+                                }
+                            }
+                        ],
+                        "witnesses": [
+                            "Base",
+                            "E2",
+                            "T"
+                        ],
+                        "_id": "248a20aec67083c0254225f3cfd0c1a4"
+                    },
+                    {
+                        "label": "b",
+                        "text": [],
+                        "type": "om_verse",
+                        "suffixes": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "details": "om verse",
+                        "witnesses": [
+                            "E1",
+                            "Q",
+                            "Ss"
+                        ],
+                        "_id": "40ddb6ac27553b42fd51bb6e1d61a16d"
+                    }
+                ],
+                "_id": "aa504a81f18136cacefc6a3a976c5b06"
+            }
+        ]
+    },
+    "_meta": {
+        "_last_modified_by": "default",
+        "_last_modified_time": {
+            "$date": 1477925447396
+        }
+    },
+    "display_settings": {
+        "view_supplied": true,
+        "view_unclear": true,
+        "expand_abbreviations": true,
+        "use_lemma": true,
+        "view_capitalisation": true
+    },
+    "status": "approved",
+    "algorithm_settings": {
+        "fuzzy_match": true,
+        "distance": 2,
+        "algorithm": "auto"
+    },
+    "_id": "project/default/user/default/collation/approved/D803S4100.json"
+}
