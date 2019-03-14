@@ -122,4 +122,4 @@ To reproduce the entire critical edition do the following (each script is docume
 
 Referencing
 ----
-To cite the Estoria de Espanna code please use the DOI:
+To cite the Estoria de Espanna code please use the DOI: [![DOI](https://zenodo.org/badge/174379996.svg)](https://zenodo.org/badge/latestdoi/174379996)
