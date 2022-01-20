@@ -9,7 +9,7 @@ var ESTORIA = (function () {
         get_version: function () {
             return "0.1";
         },
-        
+
         load_indice: function () {
             var windowheight;
             var filename = "static/data/indice.json";
@@ -19,9 +19,9 @@ var ESTORIA = (function () {
                 dataType: 'json'
             });
             windowheight = $('#page-wrapper').height();
-            $('.sidebar-nav').height(windowheight + 'px');
+            // $('.sidebar-nav').height(windowheight + 'px');
         },
-        
+
         do_load_indice: function (data) {
             var key, list, html, ms, i;
             html = [];
@@ -29,7 +29,7 @@ var ESTORIA = (function () {
             for (key in data) {
                 if (data.hasOwnProperty(key)) {
                     html.push('<li><div class="indice-entry"><span class="divnum">Chapter ' + data[key].div + '</span><span class="PCGchap">[' + data[key].PCG + ']</span><br/><span title="' + data[key].title + '">' + data[key].title.substring(0, 35) + '...</span>');
-                    html.push('<br/><select class="ms-select" id="ms-select-' + key + '">');
+                    html.push('<br/><select class="form-select form-select-sm ms-select" id="ms-select-' + key + '">');
                     html.push('<option value="none">select</option>');
                     for (i = 0; i < data[key].manuscripts.length; i+=1) {
                         ms = data[key].manuscripts[i];
@@ -39,18 +39,18 @@ var ESTORIA = (function () {
                     }
                     html.push('</select><br/></div></li>');
                 }
-            } 
-            list.innerHTML = html.join('');  
+            }
+            list.innerHTML = html.join('');
             $('.ms-select').change(function (event) {
                 var temp;
                 if (event.target.value != 'none') {
                     temp = event.target.value.split('|');
                     new Transcription(temp[0], temp[1]);
                     document.getElementById(event.target.id).value = 'none';
-                }              
-            });        
+                }
+            });
         },
-        
+
         add_index_toggle: function () {
             $('#index_toggle').click(function () {
                 if (document.getElementById('index_sidebar').style.display === 'none') {
@@ -62,22 +62,21 @@ var ESTORIA = (function () {
         },
 
         setup_critical: function () {
+          $("span.overtext").mouseover(function() {
+            $( "span.variant" ).removeClass('hover');
+            $( "span.overtext" ).removeClass('hover');
+  	        var ovi_id = $(this)[0].id;
+  	        var variant = $( "span.variant#" + ovi_id);
+  	        variant.addClass('hover');
+            var overtext_place = $( "span.overtext#" + ovi_id);
+            if (overtext_place.has('span.critical_marker').length) {
+              overtext_place.addClass('hover');
+            }
+          });
 
-            $("span.overtext").mouseover(function() {
-                $( "span.variant" ).removeClass('hover');
-                $( "span.overtext" ).removeClass('hover');
-	        var ovi_id = $(this)[0].id;
-	        var variant = $( "span.variant#" + ovi_id);
-	        variant.addClass('hover');
-                var overtext_place = $( "span.overtext#" + ovi_id);
-                if (overtext_place.has('span.critical_marker').length) {
-                    overtext_place.addClass('hover');
-                }
-            });
-
-            $("span.variant").mouseover(function() {
+          $("span.variant").mouseover(function() {
 	        $( "span.variant" ).removeClass('hover');
-                $( "span.overtext" ).removeClass('hover');
+          $( "span.overtext" ).removeClass('hover');
 	        var ovi_id = $(this)[0].id;
 	        var variant = $( "span.variant#" + ovi_id);
 	        variant.addClass('hover');
@@ -107,14 +106,10 @@ var ESTORIA = (function () {
                 var page_name = witname.attr("data-page-name");
                 new Transcription(witness_name, page_name);
             });
-
-
         },
 
         add_menu_item: function (key, value) {
-
             var selly = $("#li-" + key + " select");
-            //pelly = $("#li-" + key + " select");
             $.each(value, function( index, page ) {
                 selly.append('<option value="' + key + '-' + page + '">'
                              + page + '</option>');
@@ -135,7 +130,6 @@ var ESTORIA = (function () {
                          + page + '</option>');
         },
 
-
         fill_menu: function () {
             $.each( MENU_DATA, function( key, value ) {
                 ESTORIA.add_menu_item(key,value);
@@ -147,7 +141,6 @@ var ESTORIA = (function () {
             $.each( CRITICAL_PAGES, function( page ) {
                 ESTORIA.add_critical_menu(CRITICAL_PAGES[page]);
             });
-
             ESTORIA.load_indice();
             ESTORIA.add_index_toggle();
             ESTORIA.setup_reader_selection();
@@ -240,27 +233,23 @@ var ESTORIA = (function () {
                     createViewModel: function (controller, componentInfo) {
                         var ViewModel = function (controller, componentInfo) {
                             var grid = null;
-
                             this.widgets = controller.widgets;
-
                             this.afterAddWidget = function (items) {
-                                if (grid == null) {
-                                    grid = $(componentInfo.element).find('.grid-stack').gridstack({
+                                if (!grid) {
+                                    grid = GridStack.init({
                                         auto: false,
                                         draggable: {
-                                            handle: '.panel-heading'                                            
-                                        }
-                                    }).data('gridstack');
+                                            handle: '.panel-heading'
+                                          }
+                                        })
                                 }
-
-                                var item = _.find(items, function (i) { return i.nodeType == 1 });
-                                grid.add_widget(item);
+                                var item = items.find(function (i) { return i.nodeType == 1 });
+                                grid.addWidget(item, {w: 6, h:5});
                                 ko.utils.domNodeDisposal.addDisposeCallback(item, function () {
-                                    grid.remove_widget(item);
+                                  grid.removeWidget(item);
                                 });
                             };
                         };
-
                         return new ViewModel(controller, componentInfo);
                     }
                 },
@@ -271,8 +260,8 @@ var ESTORIA = (function () {
             var controller = new Controller(widgets);
             ko.applyBindings(controller);
             ESTORIA.controller = controller;
-        },
 
+        },
     };
 }());
 
@@ -430,12 +419,11 @@ class Transcription extends BaseWidget {
                 self.body(jsondata.html);
             }
             if (first_time) {
-                self.push();   
+                self.push();
             }
             $('.hoverover').tooltipster({
                 theme: 'tooltipster-light'
             });
-            
         };
         this.request(success_function);
     }
@@ -459,24 +447,22 @@ class Controller {
     }
 
     hide_abbrev(item, second) {
-        var span, classes, close;
-        if ($(second.target).prop('tagName') == 'SPAN') {
-            span = $(second.target).parent().find("span");
+        var icon, classes, close;
+        if ($(second.target).prop('tagName') == 'I') {
+            icon = $(second.target).parent().find("i");
         } else {
-            span = $(second.target).find("span");
+            icon = $(second.target).find("i");
         }
-        span.toggleClass('glyphicon-eye-open glyphicon-eye-close');
-        classes = $(span).attr('class');
-        close = classes.indexOf('close');
+        icon.toggleClass('fa-eye fa-eye-slash');
+        classes = $(icon).attr('class');
+        close = classes.indexOf('slash');
         item.abbrev = close;
         item.update_body(false);
     }
 }
 
-
 $(document).ready(function(){
     ESTORIA.fill_menu();
     ESTORIA.setup_knockout();
     ESTORIA.preload_page();
-
 });

@@ -34,8 +34,6 @@
     left: 60px;
 }
 
-
-
 @font-face {
     font-family: 'Junicode';
     font-style: normal;
@@ -81,6 +79,18 @@
 }
 
 
+#index_sidebar {
+  width: 250px;
+  height: calc(100vh - 75px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.sidebar_nav_list {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 0;
+}
 
 .sidebarcontent {
     padding-left: 37px;
@@ -95,21 +105,33 @@
         z-index: 1;
         position: absolute;
         width: 250px !important;
-        margin-top: 51px;
         right: 0 !important;
         border-left: 1px solid #e7e7e7;
-        
+      }
+}
+
+.navbar {
+    border-bottom: 1px solid  #e7e7e7;
 }
 
 .navbar-brand {
     margin-right: 40px;
+    margin-left: 10px;
 }
+
+#index_toggle {
+  float: right;
+}
+
+
 
 .indice-entry {
     font-family: 'Junicode';
     font-size: 14px;
     padding-left: 7px;
     padding-right: 7px;
+    padding-top: 5px;
+    border-top: 1px solid  #e7e7e7;
 }
 
 .PCGchap {
@@ -132,17 +154,14 @@
     width: 50px;
 }
 
-
 .dropdown-toggle {
     margin-right: 10px;
-
 }
 
 .dropdown-container {
     margin-left: 18px;
     width:200px;
 }
-
 
 .pagemenu {
     margin-right: 20px;
@@ -169,11 +188,9 @@
     width: 123px;
 }
 
-
-.panel-body {
+.panel-body, .card-body {
     font-family: Junicode,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-
 
 br.clear {
     clear: both;
@@ -207,7 +224,6 @@ sub {
     color: grey;
 }
 
-
 .expansion {
     color: grey;
 }
@@ -225,7 +241,6 @@ sub {
 .tl, .bl {
     float: left;
 }
-
 
 .app {
     color: #2ea297;
@@ -254,7 +269,6 @@ sub {
 }
 
 .chapter {
-
     float: left;
     color: #4169e1;
     font-size: 40px;
@@ -266,14 +280,14 @@ sub {
 }
 
 
-.column {    
+.column {
     background-color: #fff;
-    
+
 }
 
-.subcolumn {    
+.subcolumn {
     background-color: #fff;
-    
+
 }
 
 .gap::before {
@@ -389,22 +403,3 @@ sub {
     justify-content: center;
     align-items: center;
 }
-
-
-/* .grid-stack {
-    background: lightgoldenrodyellow;
-}
-
-
-.grid-stack-item-content {
-    color: #2c3e50;
-    text-align: center;
-    background-color: #18bc9c;
-}
-
-.panel-footer {
-    max-height: 2em;
-}
-
-
-*/
