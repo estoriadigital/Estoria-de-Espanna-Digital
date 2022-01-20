@@ -26,7 +26,7 @@ import shutil
 import json
 from lxml import etree
 
-XML_DIR = '../../XML'
+XML_DIR = '../../transcriptions/manuscripts'
 PAGE_DIR = '../transcription'
 
 class PageSplitter(object):
@@ -35,6 +35,7 @@ class PageSplitter(object):
         self.directory = directory
         self.debug = debug
         self.page_lists = {}
+        self.ns_map = {'tei': 'http://www.tei-c.org/ns/1.0'}
 
     def separate_pages(self):
         """Go through file system to find the transcriptions and call splitting functions """
@@ -47,6 +48,7 @@ class PageSplitter(object):
                     self.page_count = 1
                     self.node_stack = []
                     self.waiting_for_page = []
+                    self.header_done = False
                     self.original_filename = filename
                     self.siglum = file.replace('.xml', '').split('-')[0]
                     #create the subdirectory in ../transcription
@@ -65,6 +67,34 @@ class PageSplitter(object):
             list_fo.write('MENU_DATA = ')
             json.dump(self.page_lists, list_fo, indent=4)
 
+    def process_start_TEI(self, elem):
+        return '<div type="root">'
+
+    def process_end_TEI(self, elem):
+        return '</root></div>'
+
+    def process_start_teiHeader(self, elem):
+        #self.ignore_children_of = elem.tag.replace('{http://www.tei-c.org/ns/1.0}', '')
+        return '<header>'
+
+    def process_end_teiHeader(self, elem):
+        #self.ignore_children_of = None
+        self.header_done = True
+        return '</header>'
+
+    def process_start_text(self, elem):
+        pass
+
+    def process_end_text(self, elem):
+        pass
+
+    def process_start_body(self, elem):
+        pass
+
+    def process_end_body(self, elem):
+        pass
+
+
 
     def flatten_pages(self, parser):
         """this function separates the XML for the pages but leaves them in a single XML file"""
@@ -78,13 +108,13 @@ class PageSplitter(object):
                 if new_text is not None:
                     output_text.append(new_text)
                 if event == 'start' and elem.text != None:
-                    if self.page_count == 1:
+                    if self.page_count == 1 and self.header_done == True:
                         self.waiting_for_page.append(elem.text)
                     else:
                         output_text.append(elem.text)
 
                 if event == 'end' and elem.tail != None:
-                    if self.page_count == 1:
+                    if self.page_count == 1 and self.header_done == True:
                         self.waiting_for_page.append(elem.tail)
                     else:
                         output_text.append(elem.tail)
@@ -101,6 +131,7 @@ class PageSplitter(object):
         number = int(folio.replace('v', '')) + 1
         return '%dr' % number
 
+# './/tei:title[@type="document"]/@n', namespaces=self.nsmap
 
     def split_pages(self):
         parser = etree.XMLParser(resolve_entities=False, encoding='utf-8')
@@ -145,24 +176,24 @@ class PageSplitter(object):
         os.remove('temp_%s.xml' % self.siglum)
 
 
-    def process_start_div(self, elem):
-        #this test ensures we don't include the wrapper div for the full transcription
-        if 'n' in elem.attrib and elem.attrib['n'] == self.siglum:
-            return '<pages>'
-        else:
-            return self.process_start_tag(elem)
-
-    def process_end_div(self, elem):
-        #this test ensures we don't include the wrapper div for the full transcription
-        if 'n' in elem.attrib and elem.attrib['n'] == self.siglum:
-            return '</root></pages>'
-        else:
-            return self.process_end_tag(elem)
+    # def process_start_div(self, elem):
+    #     #this test ensures we don't include the wrapper div for the full transcription
+    #     if 'n' in elem.attrib and elem.attrib['n'] == self.siglum:
+    #         return '<pages>'
+    #     else:
+    #         return self.process_start_tag(elem)
+    #
+    # def process_end_div(self, elem):
+    #     #this test ensures we don't include the wrapper div for the full transcription
+    #     if 'n' in elem.attrib and elem.attrib['n'] == self.siglum:
+    #         return '</root></pages>'
+    #     else:
+    #         return self.process_end_tag(elem)
 
     def process_start_tag(self, elem):
         self.node_stack.append(elem)
         tag = '<%s%s%s>' % (elem.tag.replace('{http://www.tei-c.org/ns/1.0}', ''), ' ' if len(elem.attrib) > 0 else '', ' '.join(['%s="%s"' % (name, elem.attrib[name]) for name in elem.attrib]))
-        if self.page_count == 1:
+        if self.page_count == 1 and self.header_done == True:
             self.waiting_for_page.append(tag)
             return ''
         return tag
@@ -170,7 +201,7 @@ class PageSplitter(object):
     def process_end_tag(self, elem):
         self.node_stack.pop()
         tag = '</%s>' % (elem.tag.replace('{http://www.tei-c.org/ns/1.0}', ''))
-        if self.page_count == 1:
+        if self.page_count == 1 and self.header_done == True:
             self.waiting_for_page.append(tag)
             return ''
         return tag
