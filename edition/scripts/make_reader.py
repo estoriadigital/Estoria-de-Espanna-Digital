@@ -3,7 +3,7 @@ This script makes the readers edition which is stored as html files by chapter
 in the /srv/estoria/edition/reader directory. Resulting file names are
 [chapter_number].html
 
-The reader.xml file should be put in /srv/estoria/readerXML
+The reader.xml file should be put in /srv/estoria/transcirptions/readerXML
 
 At the same time this file creates the index data used for the VPL dropdown
 which is saved at /srv/estoria/edition/static/data/reader_pages.js
@@ -12,26 +12,23 @@ which is saved at /srv/estoria/edition/static/data/reader_pages.js
 import os
 import shutil
 import json
-import xml.etree.ElementTree as ET
+from lxml import etree
 
 
-DIR = '../../readerXML'
+DIR = '../../transcriptions/readerXML'
 RUBRIC_TEMPLATE = '<span class="rubric">%s</span><br />\n'
 
 class Reader(object):
     """Make Reader edition pages."""
     def __init__(self):
-        #tree = ET.parse(os.path.join(DIR, 'reader.xml'), encoding="utf-8")
-        #self.root = tree.getroot()
-        self.root = ET.fromstring(open(os.path.join(DIR, 'reader.xml'), 'r', encoding="utf-8").read())
-
-
+        self.tree = etree.fromstring(open(os.path.join(DIR, 'reader.xml'), 'r', encoding="utf-8").read())
         self.page_list = []
 
     def process(self):
         """Process all the pages."""
         print('creating new reader pages')
-        for div in self.root.getchildren():
+        for div in self.tree.xpath('//tei:div[@type="book"]/tei:div',
+                                   namespaces={'tei': 'http://www.tei-c.org/ns/1.0'}):
             self.process_page(div)
             #sys.exit()
         with open(os.path.join('../static/data', 'reader_pages.js'), 'w', encoding="utf-8") as list_fo:
