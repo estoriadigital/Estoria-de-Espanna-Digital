@@ -33,11 +33,12 @@ import os
 import json
 from lxml import etree
 
+xml_dir = '../../transcriptions/manuscripts'
 index_file = '../../chapter_index.csv'
 output_file = '../static/data/indice.json'
 page_dir = '../transcription'
 
-manuscripts = ['E1', 'E2', 'Q', 'Ss', 'T', 'Y']
+manuscripts = os.listdir('../transcription')
 
 #This section makes the initial json of the index from the csv file with
 #placeholders for manuscripts extant and pages
@@ -47,6 +48,7 @@ indice = {}
 position = 1
 
 for line in lines:
+
     tabs = line.split('\t')
     div = tabs[1].strip()
     PCG = tabs[2].strip()
@@ -59,6 +61,30 @@ for line in lines:
                             'manuscripts': [],
                             'pages': {}}
         position += 1
+
+# read Ss and grab all VC_ chapters (add cxxxix (missing in Ss before cxl)
+filename = os.path.join(xml_dir, 'Ss.xml')
+parser = etree.XMLParser(resolve_entities=False, encoding='utf-8')
+tree = etree.parse(filename, parser)
+
+for chapter in tree.xpath('//div[@n]'):
+    if chapter.get('n').find('VC_') == 0:
+        n = chapter.get('n').replace('VC_', '')
+        if n == 'cxl':
+            indice[position] = {'title': '',
+                                'div': 'cxxxix',
+                                'PCG': 'cxxxix',
+                                'manuscripts': [],
+                                'pages': {}}
+            position += 1
+
+        indice[position] = {'title': '',
+                            'div': n,
+                            'PCG': n,
+                            'manuscripts': [],
+                            'pages': {}}
+        position += 1
+
 
 print('collecting manuscript page data')
 #This section works out which divs start on which page of each manuscript
@@ -78,8 +104,8 @@ for ms in manuscripts:
                 divs = root_element.findall('.//div[@n]')
                 for div in divs:
                     if 'continued' not in div.attrib:
-                        manuscript_pages[ms][div.attrib['n']] = pagefile.replace('.json', '')
-
+                        manuscript_pages[ms][div.attrib['n'].replace('VC_', '')] = pagefile.replace('.json', '')
+# print(manuscript_pages)
 #now we add manuscript page details to the index
 for pos in indice:
     div_id = indice[pos]['div']
