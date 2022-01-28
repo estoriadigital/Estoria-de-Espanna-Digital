@@ -59,7 +59,7 @@ top of each script.
 
 
 * Name each file with the witness sigla followed by '.xml'
-* Put the XML files in the `XML` directory
+* Put the XML files in the `transcriptions/manuscripts` directory (`transcriptions` is a git submodule)
 * Navigate to the `edition/scripts` directory
 * Make the pages by doing the following:
   * Run `make_paginated_json.py`
@@ -72,7 +72,7 @@ top of each script.
 
 
 * Name the XML file 'reader.xml'
-* Put the XML file in the `readerXML` directory
+* Put the XML file in the `transcriptions/readerXML` directory (`transcriptions` is a git submodule)
 * Navigate to the `edition/scripts` directory
 * Run make_reader.py
 
