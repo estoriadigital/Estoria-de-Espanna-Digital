@@ -2,6 +2,8 @@
 
 var WIDGET_I = 0;
 
+const = DATA_PATH = 'data/'
+
 var MANUSCRIPTS_WITH_IMAGES = ["Ss", "T", "Q"];
 
 var ESTORIA = (function () {
@@ -12,14 +14,13 @@ var ESTORIA = (function () {
 
         load_indice: function () {
             var windowheight;
-            var filename = "static/data/indice.json";
+            var filename = DATA_PATH + "indice.json";
             $.ajax({
                 url: filename,
                 success: function (data) {ESTORIA.do_load_indice(data);},
                 dataType: 'json'
             });
             windowheight = $('#page-wrapper').height();
-            // $('.sidebar-nav').height(windowheight + 'px');
         },
 
         do_load_indice: function (data) {
@@ -295,7 +296,7 @@ class BaseWidget {
     }
 
     update_filename() {
-        var filename = "static/data/" + this.get_feature_name() + "/";
+        var filename = DATA_PATH + this.get_feature_name() + "/";
         if (this.manuscript) {
             filename += this.manuscript + '/';
         }

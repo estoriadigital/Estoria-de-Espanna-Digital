@@ -8,10 +8,10 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.(json)/,
-      //   type: 'asset/resource'
-      // }
+      {
+        test: /\.(woff|woff2|ttf)$/i,
+        type: 'asset/resource'
+      }
     ]
   },
   plugins: [

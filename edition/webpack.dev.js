@@ -15,9 +15,12 @@ module.exports = merge(common, {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
-      },
+        test: /\.(woff|woff2|ttf|svg|eot)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]'
+        }
+      }
     ]
   },
   devtool: 'inline-source-map',

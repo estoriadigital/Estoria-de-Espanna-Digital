@@ -17,9 +17,12 @@ module.exports = merge(common, {
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
-        test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-      },
+        test: /\.(woff|woff2|ttf|svg|eot)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]'
+        }
+      }
     ]
   },
   plugins: [
