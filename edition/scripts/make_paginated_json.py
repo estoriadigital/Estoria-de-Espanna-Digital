@@ -71,7 +71,7 @@ class PageSplitter(object):
         return '<div type="root">'
 
     def process_end_TEI(self, elem):
-        return '</root></div>'
+        return '</div>'
 
     def process_start_teiHeader(self, elem):
         #self.ignore_children_of = elem.tag.replace('{http://www.tei-c.org/ns/1.0}', '')
@@ -176,19 +176,19 @@ class PageSplitter(object):
         os.remove('temp_%s.xml' % self.siglum)
 
 
-    # def process_start_div(self, elem):
-    #     #this test ensures we don't include the wrapper div for the full transcription
-    #     if 'n' in elem.attrib and elem.attrib['n'] == self.siglum:
-    #         return '<pages>'
-    #     else:
-    #         return self.process_start_tag(elem)
-    #
-    # def process_end_div(self, elem):
-    #     #this test ensures we don't include the wrapper div for the full transcription
-    #     if 'n' in elem.attrib and elem.attrib['n'] == self.siglum:
-    #         return '</root></pages>'
-    #     else:
-    #         return self.process_end_tag(elem)
+    def process_start_div(self, elem):
+        #this test ensures we don't include the wrapper div for the full transcription
+        if 'n' in elem.attrib and elem.attrib['n'] == self.siglum:
+            return '<pages>'
+        else:
+            return self.process_start_tag(elem)
+
+    def process_end_div(self, elem):
+        #this test ensures we don't include the wrapper div for the full transcription
+        if 'n' in elem.attrib and elem.attrib['n'] == self.siglum:
+            return '</root></pages>'
+        else:
+            return self.process_end_tag(elem)
 
     def process_start_tag(self, elem):
         self.node_stack.append(elem)
