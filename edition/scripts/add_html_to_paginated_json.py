@@ -235,18 +235,16 @@ class DisplayTextGenerator(object):
                     print("Skipping %s." % element.tag)
                 if element.text:
                     self.update_text(output_text, element.text)
-                    #output_text += element.text
                     new_text = None
             else:
                 if new_text == NO_TAIL:
                     pass
                 elif new_text:
                     self.update_text(output_text, new_text)
-                    #output_text += new_text
             if element.tail and event == 'end':
                 if new_text != NO_TAIL:
                     self.update_text(output_text, element.tail)
-                    #output_text += element.tail
+
 
         if self.expanded:
             data['html'] = ''.join(output_text)
@@ -279,7 +277,10 @@ class DisplayTextGenerator(object):
         pass
 
     def process_end_root(self, element):
-        pass
+        if self.subcolumn:
+            return '</div></div></div></div>'
+        else:
+            return '</div></div>'
 
     def process_start_text(self, element):
         """Text is the root element at the top of the file.
@@ -306,8 +307,12 @@ class DisplayTextGenerator(object):
         subcolumns. sometimes subcolumns appear in the XML before a main column
         so we need to force a main column in those situations
         2022 update: bootstrap5 requires columns to be wrapped in a
-        div@class=row element"""
+        div@class=row element so this is now even more complicated.
+        Also we need to close and reopen any open spans (rubric hopefully only
+        one) either side of the div"""
         column_html = []
+        if self.in_rubric:
+            column_html.append('</span>')
         if 'n' in element.attrib:
             if element.attrib['n'].find('-') == -1:
                 main = True
@@ -347,13 +352,15 @@ class DisplayTextGenerator(object):
             if main and main_id != self.current_main_column:
                 column_html.append('</div>')
                 column_html.append('<div class="column col-md-%d">' % (12/len(self.column_structure)))
-                if self.in_rubric:
-                    column_html.append('<span class="rubric">')
+                # if self.in_rubric:
+                #     column_html.append('<span class="rubric">')
                 self.current_main_column = main_id
             elif main and main_id == self.current_main_column: #this is end of subcolumn and associated row
                 column_html.append('</div></div>')
                 self.subcolumn = False
             elif not main and main_id != self.current_main_column:
+                if self.subcolumn:
+                    column_html.append('</div>')
                 column_html.append('</div>')
                 column_html.append('</div>')
                 column_html.append('<div class="column col-md-%d">' % (12/len(self.column_structure)))
@@ -368,6 +375,8 @@ class DisplayTextGenerator(object):
                     column_html.append('<br class="clear"/><div class="row">')
                 column_html.append('<div class="subcolumn col-md-%d">' % (12/len(self.column_structure[main_id])))
                 self.subcolumn = True
+        if self.in_rubric:
+            column_html.append('<span class="rubric">')
         return ''.join(column_html)
 
     def process_end_cb(self, element):
@@ -418,13 +427,46 @@ class DisplayTextGenerator(object):
         """Line break is Milestone, so we don't do anything."""
         pass
 
+    # def process_start_ab(self, element):
+    #     """Block."""
+    #     text = ""
+    #     if not self.past_first_ab:
+    #         self.past_first_ab = True
+    #     else:
+    #         text += '</span>'
+    #     try:
+    #         identifier = element.attrib['n']
+    #     except KeyError:
+    #         if FORCE:
+    #             identifier = "000"
+    #         else:
+    #             raise
+    #     if len(identifier) == 0:
+    #         #then for some reason this doesn't have an identifier so don't add title
+    #         text += '<span class="ab">'
+    #     else:  #we need to get the number right and display it
+    #         if identifier[-1] == '0' and identifier[-2] == '0':
+    #             identifier = identifier[:-2]
+    #         elif identifier[-1] == '0':
+    #             identifier = '%s.%s' % (identifier[:-2], identifier[-2])
+    #         else:
+    #             identifier = '%s.%s' % (identifier[:-2], identifier[-2:])
+    #         if 'continued' in element.attrib and element.attrib['continued'] == 'true':
+    #             text += '<span class="ab" id="%s">' % identifier
+    #         else:
+    #             text += '<span class="ab" id="%s"><sub>%s</sub>&nbsp;' % (identifier,
+    #                                                           identifier)
+    #     if element.text:
+    #         text += element.text
+    #     return text
+
     def process_start_ab(self, element):
         """Block."""
         text = ""
-        if not self.past_first_ab:
-            self.past_first_ab = True
-        else:
-            text += '</span>'
+        # if not self.past_first_ab:
+        #     self.past_first_ab = True
+        # else:
+        #     text += '</span>'
         try:
             identifier = element.attrib['n']
         except KeyError:
@@ -433,8 +475,9 @@ class DisplayTextGenerator(object):
             else:
                 raise
         if len(identifier) == 0:
+            pass
             #then for some reason this doesn't have an identifier so don't add title
-            text += '<span class="ab">'
+            # text += '<span class="ab">'
         else:  #we need to get the number right and display it
             if identifier[-1] == '0' and identifier[-2] == '0':
                 identifier = identifier[:-2]
@@ -443,10 +486,10 @@ class DisplayTextGenerator(object):
             else:
                 identifier = '%s.%s' % (identifier[:-2], identifier[-2:])
             if 'continued' in element.attrib and element.attrib['continued'] == 'true':
-                text += '<span class="ab" id="%s">' % identifier
+                pass
+                # text += '<span class="ab" id="%s">' % identifier
             else:
-                text += '<span class="ab" id="%s"><sub>%s</sub>&nbsp;' % (identifier,
-                                                              identifier)
+                text += '<sub>%s</sub>&nbsp;' % (identifier)
         if element.text:
             text += element.text
         return text
@@ -709,7 +752,7 @@ class DisplayTextGenerator(object):
         data = '<span class="hoverover unclear"'
         reason = element.get('reason')
         if reason and not self.app_open:
-            data += 'title="text ' + reason + '"'
+            data += ' title="text ' + reason + '"'
         data += '>'
         if element.text:
             data += element.text
