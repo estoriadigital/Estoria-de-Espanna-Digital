@@ -201,6 +201,7 @@ class DisplayTextGenerator(object):
         self.am_open = False
         self.am_text = []
         self.amex_pos = 0
+        self.note_pos = 0
 
         self.abbr_open = False
         self.expan_open = False
@@ -767,13 +768,13 @@ class DisplayTextGenerator(object):
         else:
             text = element.text if element.text is not None else ''
             if 'place' in element.attrib:
-                return '<span class="note hoverover" title="%s: %s">☜</span>' % (element.attrib['place'], text.replace('"', '\''))
+                return '<span class="note hoverover" data-tooltip-content="#note-%s-%s-%s">☜</span><div class="tooltip_templates"><span id="note-%s-%s-%s">%s: %s' % (self.sigla, self.page, self.note_pos, self.sigla, self.page, self.note_pos, element.attrib['place'], text.replace('"', '\''))
             else:
-                return '<span class="note hoverover" title="%s">☜</span>' % text.replace('"', '\'')
+                return '<span class="note hoverover" data-tooltip-content="#note-%s-%s-%s">☜</span><div class="tooltip_templates"><span id="note-%s-%s-%s">%s' % (self.sigla, self.page, self.note_pos, self.sigla, self.page, self.note_pos, text.replace('"', '\''))
 
     def process_end_note(self, element):
-        return ''
-
+        self.note_pos += 1
+        return '</span></div>'
 
     def process_start_figDesc(self, element):
         return '<span class="note hoverover" title="%s">☜</span>' % (element.text)
