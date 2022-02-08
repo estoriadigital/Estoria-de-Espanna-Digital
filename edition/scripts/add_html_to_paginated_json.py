@@ -188,6 +188,8 @@ class DisplayTextGenerator(object):
         self.subcolumn = False
         self.waiting_for_column = []
         self.in_rubric = False
+        self.in_hi = False
+        self.hi_list = []
 
         self.app_pos = 0
         self.app_open = False
@@ -312,8 +314,12 @@ class DisplayTextGenerator(object):
         Also we need to close and reopen any open spans (rubric hopefully only
         one) either side of the div"""
         column_html = []
-        if self.in_rubric:
+        add_opening_rubric = False
+        if self.in_rubric and self.column_number != 0:
             column_html.append('</span>')
+            add_opening_rubric = True
+        if self.in_hi:
+            column_html.extend(['</span>' for x in self.hi_list])
         if 'n' in element.attrib:
             if element.attrib['n'].find('-') == -1:
                 main = True
@@ -351,10 +357,12 @@ class DisplayTextGenerator(object):
 
         else:
             if main and main_id != self.current_main_column:
+                if self.subcolumn:
+                    column_html.append('</div></div>')
+                    self.subcolumn = False
                 column_html.append('</div>')
                 column_html.append('<div class="column col-md-%d">' % (12/len(self.column_structure)))
-                # if self.in_rubric:
-                #     column_html.append('<span class="rubric">')
+
                 self.current_main_column = main_id
             elif main and main_id == self.current_main_column: #this is end of subcolumn and associated row
                 column_html.append('</div></div>')
@@ -376,7 +384,9 @@ class DisplayTextGenerator(object):
                     column_html.append('<br class="clear"/><div class="row">')
                 column_html.append('<div class="subcolumn col-md-%d">' % (12/len(self.column_structure[main_id])))
                 self.subcolumn = True
-        if self.in_rubric:
+        if self.in_hi:
+            column_html.append(''.join(self.hi_list))
+        if add_opening_rubric:
             column_html.append('<span class="rubric">')
         return ''.join(column_html)
 
@@ -678,14 +688,27 @@ class DisplayTextGenerator(object):
                 else:
                     return '<span class="%s">&nbsp;&nbsp;&nbsp;' % cls
             else:
+                self.in_hi = True
+                self.hi_list.append('<span class="%s">' % element.attrib['rend'])
                 if element.text != None:
                     return '<span class="%s">%s' % (element.attrib['rend'], element.text)
                 else:
                     return '<span class="%s">' % element.attrib['rend']
+        if element.text != None:
+            return element.text
+        else:
+            pass
 
     def process_end_hi(self, element):
         """End hi tag."""
-        return '</span>'
+        if self.in_hi is True:
+            self.hi_list.pop()
+            if len(self.hi_list) == 0:
+                self.in_hi = False
+        if 'rend' in element.attrib:
+            return '</span>'
+        else:
+            pass
 
 
     def process_start_choice(self, element):
@@ -773,8 +796,11 @@ class DisplayTextGenerator(object):
                 return '<span class="note hoverover" data-tooltip-content="#note-%s-%s-%s">☜</span><div class="tooltip_templates"><span id="note-%s-%s-%s">%s' % (self.sigla, self.page, self.note_pos, self.sigla, self.page, self.note_pos, text.replace('"', '\''))
 
     def process_end_note(self, element):
-        self.note_pos += 1
-        return '</span></div>'
+        if 'type' in element.attrib and element.attrib['type'] == 'ed':
+            pass
+        else:
+            self.note_pos += 1
+            return '</span></div>'
 
     def process_start_figDesc(self, element):
         return '<span class="note hoverover" title="%s">☜</span>' % (element.text)
