@@ -183,6 +183,7 @@ class DisplayTextGenerator(object):
         self.past_first_chapter_div = False
         self.past_first_ab = False
         self.column_number = 0
+        self.in_main_column = False
         self.current_main_column = 'a'
         self.current_subcolumn = None
         self.subcolumn = False
@@ -282,8 +283,9 @@ class DisplayTextGenerator(object):
     def process_end_root(self, element):
         if self.subcolumn:
             return '</div></div></div></div>'
-        else:
+        if self.in_main_column:
             return '</div></div>'
+        return ''
 
     def process_start_text(self, element):
         """Text is the root element at the top of the file.
@@ -345,6 +347,7 @@ class DisplayTextGenerator(object):
                 self.waiting_for_column = [] #reset although probably not needed as it is reset on pages anyway
 
             column_html.append('<div class="row"><div class="column col-md-%d">' % (12/len(self.column_structure)))
+            self.in_main_column = True
 
             self.current_main_column = main_id
             if main:
@@ -362,7 +365,7 @@ class DisplayTextGenerator(object):
                     self.subcolumn = False
                 column_html.append('</div>')
                 column_html.append('<div class="column col-md-%d">' % (12/len(self.column_structure)))
-
+                self.in_main_column = True
                 self.current_main_column = main_id
             elif main and main_id == self.current_main_column: #this is end of subcolumn and associated row
                 column_html.append('</div></div>')
@@ -373,6 +376,7 @@ class DisplayTextGenerator(object):
                 column_html.append('</div>')
                 column_html.append('</div>')
                 column_html.append('<div class="column col-md-%d">' % (12/len(self.column_structure)))
+                self.in_main_column = True
                 self.current_main_column = main_id
                 column_html.append('<div class="row"><div class="subcolumn col-md-%d">' % (12/len(self.column_structure[main_id])))
                 self.current_subcolumn = subcolumn_id
@@ -753,7 +757,7 @@ class DisplayTextGenerator(object):
 
     def process_end_rdg(self, element):
         if 'type' in element.attrib and element.attrib['type'] == 'mod':
-            return '</div></span>'
+            return '</span></div>'
         return '</span>'
 
     def process_start_seg(self, element):
@@ -840,13 +844,17 @@ class DisplayTextGenerator(object):
     def process_start_fw(self, element):
         place = ''
         column_close = ''
+        # first escape the column if this is in the bottom margin
         if 'place' in element.attrib:
             place = ' ' + element.attrib['place']
             if place[1] == 'b':
-                if self.subcolumn == True:
-                    column_close = '</div></div><br class="clear"/>'
+                if self.subcolumn:
+                    column_close = '</div></div></div></div><br class="clear"/>'
+                    self.subcolumn = False
+                    self.in_main_column = False
                 else:
-                    column_close = '</div><br class="clear"/>'
+                    column_close = '</div></div><br class="clear"/>'
+                    self.in_main_column = False
 
         if 'type' in element.attrib and element.attrib['type'] == 'header':
             if element.text != None:
@@ -874,6 +882,8 @@ class DisplayTextGenerator(object):
     def process_end_fw(self, element):
         if 'place' in element.attrib and element.attrib['place'] == 'tm':
             return '</span><br class="clear"/>'
+        if 'type' in element.attrib and element.attrib['type'] == 'catch':
+            return '</span>'
         return '</span>'
 
 
