@@ -1,4 +1,4 @@
-module.exports.CRITICAL_PAGES = CRITICAL_PAGES = [
+CRITICAL_PAGES = [
     1,
     2,
     3,

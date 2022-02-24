@@ -10,10 +10,6 @@ import 'gridstack/dist/h5/gridstack-dd-native';
 
 const tooltipster = require('tooltipster');
 
-import {MENU_DATA} from './assets/static/js/menu_data.js';
-import {READER_PAGES} from './assets/static/js/reader_pages.js';
-import {CRITICAL_PAGES} from './assets/static/js/critical_pages.js';
-
 const DATA_PATH = 'data/';
 const MANUSCRIPTS_WITH_IMAGES = ["Ss", "T", "Q"];
 
