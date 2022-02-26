@@ -41,10 +41,13 @@ Each tag that needs special handling has a process_start_[tagname] and
 process_end_[tagname] function.
 
 Run in python3
-No further arguments added
+No further arguments added unless being run by the admin app in which case
+the path to the data directory must be supplied.
 If the transcriptions have changed you must run make_paginated_json.py first
 
 """
+import sys
+import argparse
 import re
 import os
 import io
@@ -53,17 +56,18 @@ from xml.etree.ElementTree import iterparse, ParseError
 from lxml import etree
 from cgitb import text
 
-PAGE_LOCATION = "../transcription"
+DATA_DIR = '../src/assets/data'
 NO_TAIL = -666
 FORCE = True
 
 class DisplayTextGenerator(object):
     """Generate pages for display."""
     def __init__(self,
-                 page_location=PAGE_LOCATION,
+                 data_path=DATA_DIR,
                  debug=False,
                  expanded=False):
-        self.page_location = page_location
+        self.data_path = data_path
+        self.page_path = os.path.join(data_path, 'transcriptions')
         self.expanded = expanded
         self.debug = debug
         self.abbreviations = []
@@ -76,8 +80,8 @@ class DisplayTextGenerator(object):
             print('adding expanded html')
         else:
             print('adding abbreviated html')
-        for directory in os.listdir(self.page_location):
-            dir_path = os.path.join(self.page_location, directory)
+        for directory in os.listdir(self.page_path):
+            dir_path = os.path.join(self.page_path, directory)
             print(directory)
             for filename in os.listdir(dir_path):
                 if filename.endswith('.json'):
@@ -147,7 +151,6 @@ class DisplayTextGenerator(object):
         return outputtext
 
 
-
     def count_columns(self, data, document, page):
         try:
             root_element = etree.fromstring(data['text'])
@@ -211,7 +214,7 @@ class DisplayTextGenerator(object):
 
 
 
-        filename = os.path.join(self.page_location, document, page)
+        filename = os.path.join(self.page_path, document, page)
         with open(filename, encoding="utf-8") as file_p:
             data = json.load(file_p)
         self.column_structure = self.count_columns(data, document, page)
@@ -888,14 +891,34 @@ class DisplayTextGenerator(object):
 
 
 
-def main():
+def main(argv):
     """Run when module called."""
-    #run once for abbreviated
-    gen = DisplayTextGenerator(debug=False, expanded=False)
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-d', '--data_path',
+                        help='the path to the data directory'
+                             '(only used by the django app, use default for '
+                             'webpack build)')
+
+    args = parser.parse_args()
+
+    # run once for abbreviated
+    if args.data_path:
+        gen = DisplayTextGenerator(debug=False,
+                                   expanded=False,
+                                   data_path=args.data_path)
+    else:
+        gen = DisplayTextGenerator(debug=False, expanded=False)
     gen.generate_all_pages()
+
     #and again for expanded
-    gen = DisplayTextGenerator(debug=False, expanded=True)
+    if args.data_path:
+        gen = DisplayTextGenerator(debug=False,
+                                   expanded=True,
+                                   data_path=args.data_path)
+    else:
+        gen = DisplayTextGenerator(debug=False, expanded=True)
     gen.generate_all_pages()
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])

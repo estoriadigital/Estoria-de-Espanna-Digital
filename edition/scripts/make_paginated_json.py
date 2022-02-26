@@ -16,26 +16,30 @@ The resulting JSON contains the following keys
 * text - the XML for the page (wrapped in a 'root' element)
 
 Run in Python3
-No further arguments needed
+No further arguments needed unless being run by the admin app in which case
+the path to the data directory must be supplied.
 Following this run add_html_to_paginated_json.py to add the html data to the json files
 
 """
-
+import sys
 import os
 import shutil
+import argparse
 import json
 from lxml import etree
 
 XML_DIR = '../../transcriptions/manuscripts'
-PAGE_DIR = '../transcription'
+DATA_DIR = '../src/assets/data'
 
 class PageSplitter(object):
     """Generate pages for display"""
-    def __init__(self, directory=XML_DIR, debug=False):
+    def __init__(self, directory=XML_DIR, debug=False, output_path=DATA_DIR):
         self.directory = directory
         self.debug = debug
         self.page_lists = {}
         self.ns_map = {'tei': 'http://www.tei-c.org/ns/1.0'}
+        self.data_path = output_path
+        self.page_path = os.path.join(output_path, 'transcriptions')
 
     def separate_pages(self):
         """Go through file system to find the transcriptions and call splitting functions """
@@ -52,8 +56,8 @@ class PageSplitter(object):
                     self.original_filename = filename
                     self.siglum = file.replace('.xml', '').split('-')[0]
                     #create the subdirectory in ../transcription
-                    if not os.path.exists(os.path.join(PAGE_DIR, self.siglum)):
-                        os.mkdir(os.path.join(PAGE_DIR, self.siglum))
+                    if not os.path.exists(os.path.join(self.page_path, self.siglum)):
+                        os.mkdir(os.path.join(self.page_path, self.siglum))
                     self.page_lists[self.siglum] = []
 
                     print(self.siglum)
@@ -63,7 +67,7 @@ class PageSplitter(object):
                         output_file.write('<?xml version="1.0" encoding="UTF-8"?>\n%s' % ''.join(pages).replace('{http://www.w3.org/XML/1998/namespace}', '').replace('&', '&amp;'))
                     self.split_pages()
         # print out the index for the drop down menus
-        with open(os.path.join('../static/data', 'menu_data.js'), 'w', encoding="utf-8") as list_fo:
+        with open(os.path.join(self.data_path, 'menu_data.js'), 'w', encoding="utf-8") as list_fo:
             list_fo.write('MENU_DATA = ')
             json.dump(self.page_lists, list_fo, indent=4)
 
@@ -168,7 +172,7 @@ class PageSplitter(object):
             except IndexError:
                 page_json['next'] = None
             page_json['text'] = etree.tounicode(page)
-            with open(os.path.join(PAGE_DIR, self.siglum, '%s.json' % page_json['name']), 'w', encoding="utf-8") as output_file:
+            with open(os.path.join(self.page_path, self.siglum, '%s.json' % page_json['name']), 'w', encoding="utf-8") as output_file:
                 json.dump(page_json, output_file, ensure_ascii=False, indent=4)
         #clean up
         self.page_lists[self.siglum] = page_numbers
@@ -238,23 +242,35 @@ class PageSplitter(object):
 
     def clear_transcription_directory(self):
         try:
-            shutil.rmtree('../transcription')
+            shutil.rmtree(self.page_path)
         except:
             pass
         try:
-            os.mkdir('../transcription')
+            os.makedirs(self.page_path)
         except FileExistsError:
             pass
         print('old pages deleted')
 
 
-def main():
+def main(argv):
     """Run when module called."""
-    ps = PageSplitter(debug=True)
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-o', '--output_path',
+                        help='the output path to use to output the data files'
+                             '(only used by the django app, use default for '
+                             'webpack build)')
+
+    args = parser.parse_args()
+
+    if args.output_path:
+        ps = PageSplitter(debug=True, output_path=args.output_path)
+    else:
+        ps = PageSplitter(debug=True)
+
     ps.clear_transcription_directory()
     ps.separate_pages()
 
 
-
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])
