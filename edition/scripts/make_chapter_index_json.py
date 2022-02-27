@@ -120,7 +120,7 @@ class IndiceCreator(object):
                         for div in divs:
                             if 'continued' not in div.attrib:
                                 manuscript_pages[ms][div.attrib['n'].replace('VC_', '')] = pagefile.replace('.json', '')
-        # print(manuscript_pages)
+
         # now we add manuscript page details to the index
         for pos in indice:
             div_id = indice[pos]['div']

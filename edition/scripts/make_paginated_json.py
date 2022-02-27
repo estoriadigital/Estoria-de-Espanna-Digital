@@ -3,7 +3,7 @@
 This script is the first stage for ingesting the XML transcriptions. It splits
 the XML into pages and stores a json object for each page in a file in the
 /srv/estoria/editions/transcription directory (further subdivided by Manuscript)
-with the page number used as the name of the file. The script clears the
+with the page number used as the name of the file). The script clears the
 transcription directory before starting to make sure that any no longer wanted
 pages are deleted.
 
@@ -33,13 +33,13 @@ DATA_DIR = '../src/assets/data'
 
 class PageSplitter(object):
     """Generate pages for display"""
-    def __init__(self, directory=XML_DIR, debug=False, output_path=DATA_DIR):
+    def __init__(self, directory=XML_DIR, debug=False, data_path=DATA_DIR):
         self.directory = directory
         self.debug = debug
         self.page_lists = {}
         self.ns_map = {'tei': 'http://www.tei-c.org/ns/1.0'}
-        self.data_path = output_path
-        self.page_path = os.path.join(output_path, 'transcriptions')
+        self.data_path = data_path
+        self.page_path = os.path.join(data_path, 'transcriptions')
 
     def separate_pages(self):
         """Go through file system to find the transcriptions and call splitting functions """
@@ -256,15 +256,15 @@ def main(argv):
     """Run when module called."""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-o', '--output_path',
-                        help='the output path to use to output the data files'
+    parser.add_argument('-d', '--data_path',
+                        help='the path to the data diretory for output'
                              '(only used by the django app, use default for '
                              'webpack build)')
 
     args = parser.parse_args()
 
-    if args.output_path:
-        ps = PageSplitter(debug=True, output_path=args.output_path)
+    if args.data_path:
+        ps = PageSplitter(debug=True, data_path=args.data_path)
     else:
         ps = PageSplitter(debug=True)
 

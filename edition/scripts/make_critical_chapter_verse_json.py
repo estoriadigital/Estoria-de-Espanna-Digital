@@ -2,12 +2,12 @@
 This script makes two files. The have the same data a slightly different structure.
 The data is the collation editor output stored in /srv/estoria/edition/apparatus/collation
 
-One is a json object used by make_apparatus_index_page.py to generate the main 
-apparatus index. 
+One is a json object used by make_apparatus_index_page.py to generate the main
+apparatus index.
 This file is saved to /srv/estoria/edition/apparatus/collations.json
 
 The other is a javascript file containing a variable called COLLATION_LIST
-which contains the same json object as the file above. This is used to generate 
+which contains the same json object as the file above. This is used to generate
 the chapter views of the critical text.
 This file is saved to /srv/estoria/edition/static/data/collations.js
 
@@ -16,8 +16,11 @@ This file is saved to /srv/estoria/edition/static/data/collations.js
 import os
 import json
 
+DATA_DIR = '../src/assets/data'
+APPARATUS_DIR = '../apparatus'
+
 def main():
-    blobs = [filename.strip('.json') for filename in os.listdir('../apparatus/collation')]
+    blobs = [filename.strip('.json') for filename in os.listdir(os.path.join(APPARATUS_DIR, 'collation'))]
     blobs.sort()
     data = {}
 
@@ -73,9 +76,9 @@ def main():
         else:
             continue
 
-    with open('../apparatus/collations.json', 'w') as fp:
+    with open(os.path.join(APPARATUS_DIR, 'collations.json'), 'w') as fp:
         json.dump(data, fp, indent=4)
-    with open('../static/data/collations.js', 'w') as js_file:
+    with open(os.path.join(DATA_DIR, 'collations.js'), 'w') as js_file:
         js_file.write('COLLATION_LIST = ')
         json.dump(data, js_file, indent=4)
 
