@@ -39,13 +39,14 @@ xml_dir = '../../transcriptions/manuscripts'
 index_file = '../../chapter_index.csv'
 DATA_DIR = '../src/assets/data'
 
-manuscripts = os.listdir('../transcription')
+
 
 class IndiceCreator(object):
 
-    def __init__(self, data_directory=DATA_DIR):
-        self.data_path = data_directory
-        self.page_path = os.path.join(data_directory, 'transcriptions')
+    def __init__(self, data_path=DATA_DIR):
+        self.data_path = data_path
+        self.page_path = os.path.join(data_path, 'transcription')
+        self.manuscripts = os.listdir(os.path.join(data_path, 'transcription'))
 
     def make_indice(self):
 
@@ -98,15 +99,15 @@ class IndiceCreator(object):
         print('collecting manuscript page data')
         #This section works out which divs start on which page of each manuscript
         manuscript_pages = {}
-        for ms in manuscripts:
+        for ms in self.manuscripts:
             print(ms)
             manuscript_pages[ms] = {}
             for pagefile in os.listdir(os.path.join(self.data_path,
-                                                    'transcriptions',
+                                                    'transcription',
                                                     ms)):
                 if pagefile.endswith('.json'):
                     with open(os.path.join(self.data_path,
-                                           'transcriptions',
+                                           'transcription',
                                            ms,
                                            pagefile),
                               encoding="utf-8") as file_p:
@@ -124,7 +125,7 @@ class IndiceCreator(object):
         # now we add manuscript page details to the index
         for pos in indice:
             div_id = indice[pos]['div']
-            for ms in manuscripts:
+            for ms in self.manuscripts:
                 if div_id in manuscript_pages[ms]:
                     indice[pos]['manuscripts'].append(ms)
                     indice[pos]['pages'][ms] = manuscript_pages[ms][div_id]

@@ -39,7 +39,7 @@ class PageSplitter(object):
         self.page_lists = {}
         self.ns_map = {'tei': 'http://www.tei-c.org/ns/1.0'}
         self.data_path = data_path
-        self.page_path = os.path.join(data_path, 'transcriptions')
+        self.page_path = os.path.join(data_path, 'transcription')
 
     def separate_pages(self):
         """Go through file system to find the transcriptions and call splitting functions """
@@ -257,7 +257,7 @@ def main(argv):
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-d', '--data_path',
-                        help='the path to the data diretory for output'
+                        help='the path to the data directory for output'
                              '(only used by the django app, use default for '
                              'webpack build)')
 

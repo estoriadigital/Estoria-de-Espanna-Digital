@@ -67,7 +67,7 @@ class DisplayTextGenerator(object):
                  debug=False,
                  expanded=False):
         self.data_path = data_path
-        self.page_path = os.path.join(data_path, 'transcriptions')
+        self.page_path = os.path.join(data_path, 'transcription')
         self.expanded = expanded
         self.debug = debug
         self.abbreviations = []
