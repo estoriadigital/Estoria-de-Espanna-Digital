@@ -12,14 +12,15 @@ the chapter views of the critical text.
 This file is saved to /srv/estoria/edition/static/data/collations.js
 
 """
-
+import sys
+import argparse
 import os
 import json
 
 DATA_DIR = '../src/assets/data'
 APPARATUS_DIR = '../apparatus'
 
-def main():
+def make_critical_text_files(data_path=DATA_DIR):
     blobs = [filename.strip('.json') for filename in os.listdir(os.path.join(APPARATUS_DIR, 'collation'))]
     blobs.sort()
     data = {}
@@ -76,11 +77,34 @@ def main():
         else:
             continue
 
+    chapters = list(data.keys())
+    chapters.sort(key = lambda x: int(x))
+    #if we add to a new dictionary in order the order will be preserved
+    new_data = {}
+    for chapter in chapters:
+        new_data[chapter] = data[chapter]
     with open(os.path.join(APPARATUS_DIR, 'collations.json'), 'w') as fp:
-        json.dump(data, fp, indent=4)
-    with open(os.path.join(DATA_DIR, 'collations.js'), 'w') as js_file:
+        json.dump(new_data, fp, indent=4)
+    with open(os.path.join(data_path, 'collations.js'), 'w') as js_file:
         js_file.write('COLLATION_LIST = ')
-        json.dump(data, js_file, indent=4)
+        json.dump(new_data, js_file, indent=4)
+
+
+def main(argv):
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-d', '--data_path',
+                        help='the path to the data directory'
+                             '(only used by the django app, use default for '
+                             'webpack build)')
+
+    args = parser.parse_args()
+
+    if args.data_path:
+        make_critical_text_files(data_path=args.data_path)
+    else:
+        make_critical_text_files()
+
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])

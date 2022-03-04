@@ -57,28 +57,5 @@ def main():
 
         index_file.write(FOOTER)
 
-
-def old_main():
-    with open('/srv/estoria/edition/apparatus/collations.json') as fp:
-        data = json.load(fp, object_pairs_hook=collections.OrderedDict)
-
-    with open('../apparatus/list/index.html', 'w') as index_file:
-        index_file.write(HEADER)
-
-        for index, chapter in enumerate(data):
-            index_file.write(CODE_LINE % (index+1,
-                               chapter,
-                               chapter,
-                               index+1,
-                               chapter,
-                               index+1))
-            index_file.write("    <ul>")
-            for verse in data[chapter]:
-                context = "D%sS%s" % (chapter, verse)
-                index_file.write("""      <li>%s | <a href="/edition/apparatus/?context=%s">Critical Edition</a> | <a href="/edition/apparatus/editor/?context=%s">Reader Edition</a> </li>""" % (verse,context,context))
-            index_file.write("    </ul>")
-
-        index_file.write(FOOTER)
-
 if __name__ == '__main__':
     main()
