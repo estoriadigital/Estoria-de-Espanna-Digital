@@ -27,6 +27,7 @@ module.exports = merge(common, {
   devServer: {
     static: path.resolve(__dirname, 'dist'),
     open: true,
-    hot: true
+    hot: true,
+    headers: {"Access-Control-Allow-Origin": "*"}
   }
 });
