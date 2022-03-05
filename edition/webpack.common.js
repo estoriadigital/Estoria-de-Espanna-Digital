@@ -4,8 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, "src/main.js"),
-    deps: path.resolve(__dirname, "src/deps.js")
+    main: path.resolve(__dirname, "src/assets/main.js")
   },
   module: {
     rules: [
