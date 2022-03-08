@@ -105,7 +105,8 @@ It is essential that all of the data in this folder is named correctly with
 regards to D and S values and that the 'context' value in the json within these
 files is also correct. The script `make_context_match_filename.py` was written
 to fix problems caused by renumbering at various stages of the project. The
-entire critical edition build relies on this.
+entire critical edition build relies on this being correct. It should be correct
+now so this script should not be needed.
 
 To check the critical apparatus and 'bake' the results into the VPE pages go to
 estoria.bham.ac.uk/edition/apparatus/list
@@ -151,3 +152,22 @@ Referencing
 ----
 To cite the Estoria de Espanna code please use the DOI:
 [![DOI](https://zenodo.org/badge/174379996.svg)](https://zenodo.org/badge/latestdoi/174379996)
+
+Installation of new version
+---
+Needs nodejs installed
+
+Clone the repository.
+Navigate to the edition directory.
+Install the node modules.
+```bash
+npm install
+```
+
+build the webpack package
+
+```bash
+npm run build
+```
+
+This builds all of the dependencies but not the data. The data now needs to be built.
