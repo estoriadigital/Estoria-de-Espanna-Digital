@@ -6,20 +6,42 @@ transcription data is available in the Transcription repository which is
 included as a submodule. The copyright of the images prevents them from being
 shared openly.
 
-It is not intended that this repository can be used to recreate Estoria Digital.
-Rather it is made available here to illustrate how the edition was put together
-and so that components that are useful to others can be reused.
+This repository can be used to rebuild some of the edition data (excluding
+images) or the data can be built later using the editoria admin tools. The
+critical edition data can only be rebuild using the estoria-admin tools.
 
-Requirements (css and js)
+
+Requirements
 ----
-* jQuery
-* jQuery-ui
-* Bootstrap
-* MetisMenu
-* Tooltipster
-* Gridstack
-* font-awesome
+nodejs
 
+Additional requirements for building the data
+----
+
+
+Installation
+----
+
+Clone the repository into a directory which is not used for serving the files
+(e.g. your home directory). Once build the files will be moved to the location
+from which it will be served.
+
+Navigate to the edition directory.
+
+Install the node modules.
+```bash
+npm install
+```
+
+Build the data that can be built here:
+
+
+
+build the webpack package
+
+```bash
+npm run build
+```
 
 
 Structure of the repository
