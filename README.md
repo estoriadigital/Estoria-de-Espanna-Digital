@@ -66,6 +66,8 @@ npm start
 To serve the files in production the contents of the edition/dist directory needs to be copied to the location that
 will server the edition.
 
+For the estoria-admin tools to work properly the collation directory in this repository must be sym linked to the data
+directory in the location serving the edition.
 
 Referencing
 ----
