@@ -22,7 +22,8 @@ Installation
 ----
 
 Clone the repository into a directory which is not used for serving the files (e.g. your home directory). Once build
-the files will be moved to the location from which it will be served.
+the files will be moved to the location from which it will be served. In the example below the repository was cloned as
+**estoria-digital**.
 
 The repository has two submodules which must also be initialised as follows.
 
