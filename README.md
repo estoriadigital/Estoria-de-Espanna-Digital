@@ -16,7 +16,7 @@ nodejs
 Additional requirements for building the data
 ----
 To run the scripts that build the data lxml must installed either globally or in a python virtual environment.
-Alternatively if you are also installing editoria-admin the virtual evinroment set up in that process can be used.
+Alternatively if you are also installing editoria-admin the virtual enviroment set up in that process can be used.
 
 Installation
 ----
